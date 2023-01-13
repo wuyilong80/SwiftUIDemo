@@ -9,7 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Stay hungry, Stay Foolsh.\n**This is how you bold a text**. *This is how you make text italic.* You can[click this link](https://www.appcoda.com) to go to appcoda.com").fontWeight(.bold).font(.custom("MoonDance", size: 25)).foregroundColor(.red).multilineTextAlignment(.center).lineLimit(nil).truncationMode(.middle).lineSpacing(5).shadow(color: .gray, radius: 2, x: 0, y: 5)
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack(alignment: .leading) {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Friday, Jan 13")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        Text("Your Reading")
+                            .font(.title)
+                            .fontDesign(.rounded)
+                            .fontWeight(.black)
+                    }
+                    Spacer()
+                }
+                .padding([.leading, .trailing])
+                
+                HStack(alignment: .top) {
+                    Group{
+                        CardView(image: "swiftui-button", category: "SwiftUI", heading: "Drawing a Border with Rounded Corners", author: "Lawrence Wu")
+                        CardView(image: "flutter-app", category: "flutter", heading: "Bilding a Complex Layout with Flutter", author: "Lawrence Wu")
+                        CardView(image: "macos-programming", category: "macOS", heading: "Bilding a Simple Editing App", author: "Lawrence Wu")
+                        CardView(image: "natural-language-api", category: "iOS", heading: "What's New in Natural Language API", author: "Lawrence Wu")
+                    }
+                    .frame(width: 300)
+                }
+                Spacer()
+            }
+        }
     }
 }
 

@@ -13,6 +13,7 @@
 		219DA7C8296D62BF00560846 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7C7296D62BF00560846 /* Preview Assets.xcassets */; };
 		219DA7D0296E4CFB00560846 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7CF296E4CD600560846 /* Nunito-Regular.ttf */; };
 		219DA7D3296E4E2200560846 /* MoonDance-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7D2296E4E2200560846 /* MoonDance-Regular.ttf */; };
+		ACCF451F2B19D62300EFB591 /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF451E2B19D62300EFB591 /* ListContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		219DA7CF296E4CD600560846 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		219DA7D1296E4D6700560846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		219DA7D2296E4E2200560846 /* MoonDance-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoonDance-Regular.ttf"; sourceTree = "<group>"; };
+		ACCF451E2B19D62300EFB591 /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				219DA7CE296E4CAE00560846 /* Fonts */,
 				219DA7C0296D62BC00560846 /* SwiftUIDemoApp.swift */,
+				ACCF451E2B19D62300EFB591 /* ListContentView.swift */,
 				219DA7C2296D62BC00560846 /* ContentView.swift */,
 				219DA7C4296D62BF00560846 /* Assets.xcassets */,
 				219DA7C6296D62BF00560846 /* Preview Content */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCF451F2B19D62300EFB591 /* ListContentView.swift in Sources */,
 				219DA7C3296D62BC00560846 /* ContentView.swift in Sources */,
 				219DA7C1296D62BC00560846 /* SwiftUIDemoApp.swift in Sources */,
 			);

@@ -8,43 +8,47 @@
 import SwiftUI
 
 struct ListContentView: View {
-    
-    var restaurants = [
-        Restaurant(name: "Cafe Deadend", image: "cafedeadend"),
-        Restaurant(name: "Homei", image: "homei"),
-        Restaurant(name: "Teakha", image: "teakha"),
-        Restaurant(name: "Cafe Loisl", image: "cafeloisl"),
-        Restaurant(name: "Petite Oyster", image: "petiteoyster"),
-        Restaurant(name: "For Kee Restaurant", image: "forkeerestaurant"),
-        Restaurant(name: "Po's Atelier", image: "posatelier"),
-        Restaurant(name: "Bourke Street Bakery", image: "bourkestreetbakery"),
-        Restaurant(name: "Haigh's Chocolate", image: "haighschocolate"),
-        Restaurant(name: "Palomino Espresso", image: "palominoespresso"),
-        Restaurant(name: "Upstate", image: "upstate"),
-        Restaurant(name: "Traif", image: "traif"),
-        Restaurant(name: "Graham Avenue Meats And Deli", image: "grahamavenuemeats"),
-        Restaurant(name: "Waffle & Wolf", image: "wafflewolf"),
-        Restaurant(name: "Five Leaves", image: "fiveleaves"),
-        Restaurant(name: "Cafe Lore", image: "cafelore"),
-        Restaurant(name: "Confessional", image: "confessional"),
-        Restaurant(name: "Barrafina", image: "barrafina"),
-        Restaurant(name: "Donostia", image: "donostia"),
-        Restaurant(name: "Royal Oak", image: "royaloak"),
-        Restaurant(name: "CASK Pub and Kitchen", image: "caskpubkitchen"),
-    ]
+
+//    @State var showDetailView = false
+    @State var selectedArticle: Article?
     
     var body: some View {
-        List {
-            ForEach(restaurants.indices) { index in
-                if index <= 1 {
-                    FullImageRow(restaurant: restaurants[index])
-                } else {
-                    BasicListRow(restaurant: restaurants[index])
+        NavigationView {
+            List {
+                ForEach(articles) { article in
+                    ArticleListView(article: article)
+                        .onTapGesture {
+//                            self.showDetailView = true
+                            self.selectedArticle = article
+                        }
+//                    ZStack(content: {
+//                        ArticleListView(article: article)
+//                        NavigationLink {
+//                            ArticleDetailView(article: article)
+//                        } label: {
+//                            EmptyView()
+//                        }
+//                        .opacity(0)
+//                    })
                 }
+                .listRowSeparator(.hidden)
+                .fullScreenCover(item: $selectedArticle, content: { article in
+                    ArticleDetailView(article: article)
+                })
+                
+//                .sheet(item: $selectedArticle, content: { article in
+//                    ArticleDetailView(article: article)
+//                })
+                
+//                .sheet(isPresented: $showDetailView, content: {
+//                    if let article = self.selectedArticle {
+//                        ArticleDetailView(article: article)
+//                    }
+//                })
             }
-            .listRowSeparator(.hidden)
+            .listStyle(.plain)
+            .navigationBarTitle("Your Reading")
         }
-        .listStyle(.plain)
     }
 }
 
@@ -52,51 +56,102 @@ struct ListContentView: View {
     ListContentView()
 }
 
-struct Restaurant: Identifiable {
-    var id: String {
-        return "\(name)\(image)"
-    }
+struct ArticleListView: View {
     
-    var name: String
-    var image: String
-}
-
-struct BasicListRow: View {
-    
-    var restaurant: Restaurant
+    var article: Article
     
     var body: some View {
-        HStack(content: {
-            Image(restaurant.image)
+        VStack(alignment: .leading, content: {
+            Image(article.image)
                 .resizable()
-                .frame(width: 40, height: 40)
-                .cornerRadius(5.0)
-            Text(restaurant.name)
+                .scaledToFit()
+            Text(article.title)
+                .font(.title)
+                .fontWeight(.black)
+            Text("By \(article.author)")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            Text("stars: \(article.rating)")
+                .foregroundStyle(.yellow)
+            Text(article.excerpt)
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .lineLimit(4)
         })
     }
 }
 
-struct FullImageRow: View {
-    var restaurant: Restaurant
-
+struct ArticleDetailView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    var article: Article
+    
+    @State private var showAlert = false
+    
     var body: some View {
-        ZStack {
-            Image(restaurant.image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 200)
-                .cornerRadius(10)
-                .overlay(
-                    Rectangle()
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
-                        .opacity(0.2)
-                )
-
-            Text(restaurant.name)
-                .font(.system(.title, design: .rounded))
-                .fontWeight(.black)
-                .foregroundColor(.white)
+        ScrollView {
+            VStack(alignment: .leading) {
+                Image(article.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                Group {
+                    Text(article.title)
+                        .font(.title)
+                        .fontWeight(.black)
+                    Text("By \(article.author)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                .padding(.bottom, 0)
+                .padding(.horizontal)
+                                
+                Text(article.content)
+                    .font(.body)
+                    .padding()
+                    .lineLimit(10000)
+                    .multilineTextAlignment(.leading)
+            }
         }
+        .ignoresSafeArea(.all, edges: .top)
+        .overlay {
+            HStack(content: {
+                Spacer()
+                VStack(content: {
+                    Button(action: {
+                        self.showAlert = true
+                    }) {
+                        Image(systemName: "chevron.down.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .padding(.trailing, 20)
+                    .padding(.top, 20)
+                    Spacer()
+                })
+            })
+        }
+        .alert(isPresented: $showAlert, content: {
+            Alert(title: Text("Warning"), message: Text("Are you sure you want to leave?"), primaryButton: .default(Text("Yes"), action: {
+                presentationMode.wrappedValue.dismiss()
+            }), secondaryButton: .cancel())
+        })
+        
+//        .navigationBarBackButtonHidden(true)
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarLeading) {
+//                Button(action: {
+//                    presentationMode.wrappedValue.dismiss()
+//                }) {
+//                    Image(systemName: "chevron.left.circle.fill")
+//                        .font(.largeTitle)
+//                        .foregroundColor(.white)
+//                }
+//            }
+//        }
     }
+}
+
+#Preview {
+    ArticleDetailView(article: articles[0])
 }

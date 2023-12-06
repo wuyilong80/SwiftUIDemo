@@ -9,14 +9,17 @@ import UIKit
 import SwiftUI
 
 struct Restaurant: Identifiable {
-    var id: String {
-        return "\(name)\(image)"
-    }
-    
+    var id = UUID()
     var name: String
+    var type: String
+    var phone: String
     var image: String
+    var priceLevel: Int
+    var isFavorite: Bool = false
+    var isCheckIn: Bool = false
 }
 
+/*
 #if DEBUG
 let restaurants = [
     Restaurant(name: "Cafe Deadend", image: "cafedeadend"),
@@ -110,4 +113,5 @@ struct RestaurantDetailView: View {
         })
     }
 }
+ */
 

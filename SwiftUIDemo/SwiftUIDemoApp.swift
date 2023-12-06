@@ -13,7 +13,8 @@ struct SwiftUIDemoApp: App {
         WindowGroup {
 //            ListContentView()
 //            ContentView()
-            TransitionView()
+//            TransitionView()
+            FormView()
         }
     }
 }

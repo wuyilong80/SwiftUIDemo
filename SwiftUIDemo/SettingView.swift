@@ -12,18 +12,20 @@ struct SettingView: View {
 //    @Environment(\.presentationMode) var presentationMode
     @Environment(\.dismiss) var dismiss
     
-    private var displayOrders = [ "Alphabetical", "Show Favorite First", "Show Check-in First"]
-    @State private var selectedOrder = 0
+//    private var displayOrders = [ "Alphabetical", "Show Favorite First", "Show Check-in First"]
+    @State private var selectedOrder = DisplayOrderType.alphabetical
     @State private var showCheckInOnly = false
     @State private var maxPriceLevel = 5
+    
+    @EnvironmentObject var settingStore: SettingStore
     
     var body: some View {
         NavigationView(content: {
             Form(content: {
                 Section {
                     Picker(selection: $selectedOrder) {
-                        ForEach(0 ..< displayOrders.count, id: \.self) { index in
-                            Text(self.displayOrders[index])
+                        ForEach(DisplayOrderType.allCases, id: \.self) { orderType in
+                            Text(orderType.stringValue)
                         }
                     } label: {
                         Text("Display order")
@@ -68,7 +70,10 @@ struct SettingView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        print("save")
+                        self.settingStore.showCheckinOnly = self.showCheckInOnly
+                        self.settingStore.displayOrder = self.selectedOrder
+                        self.settingStore.maxPriceLevel = self.maxPriceLevel
+                            dismiss()
                     }, label: {
                         Text("Save")
                             .foregroundStyle(.black)
@@ -77,9 +82,14 @@ struct SettingView: View {
                 }
             })
         })
+        .onAppear(perform: {
+            self.selectedOrder = self.settingStore.displayOrder
+            self.showCheckInOnly = self.settingStore.showCheckinOnly
+            self.maxPriceLevel = self.settingStore.maxPriceLevel
+        })
     }
 }
 
 #Preview {
-    SettingView()
+    SettingView().environmentObject(SettingStore())
 }

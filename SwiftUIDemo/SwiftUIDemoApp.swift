@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct SwiftUIDemoApp: App {
+    
+    var settingStore: SettingStore = SettingStore()
+    
     var body: some Scene {
         WindowGroup {
 //            ListContentView()
 //            ContentView()
 //            TransitionView()
-            FormView()
+            FormView().environmentObject(settingStore)
         }
     }
 }

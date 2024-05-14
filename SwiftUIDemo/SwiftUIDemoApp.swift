@@ -17,7 +17,9 @@ struct SwiftUIDemoApp: App {
 //            ListContentView()
 //            ContentView()
 //            TransitionView()
-            FormView().environmentObject(settingStore)
+//            FormView().environmentObject(settingStore)
+//            AccountView()
+            ActionRestaurantView()
         }
     }
 }

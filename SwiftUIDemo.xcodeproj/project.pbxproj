@@ -20,6 +20,8 @@
 		AC3993E52BF205B9006B6128 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E42BF205B9006B6128 /* AccountView.swift */; };
 		AC3993E72BF20927006B6128 /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */; };
 		AC3993E92BF21A3D006B6128 /* ActionRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */; };
+		AC66F3C72C12FD5900E66967 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66F3C62C12FD5900E66967 /* GestureView.swift */; };
+		AC66F3C92C130EA500E66967 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66F3C82C130EA500E66967 /* DraggableView.swift */; };
 		AC950DF32BEDF96E004B9D05 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC950DF22BEDF96E004B9D05 /* SettingStore.swift */; };
 		ACCF451F2B19D62300EFB591 /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF451E2B19D62300EFB591 /* ListContentView.swift */; };
 		ACFA28492B1DA5CB0044145F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA28482B1DA5CB0044145F /* Article.swift */; };
@@ -43,6 +45,8 @@
 		AC3993E42BF205B9006B6128 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
 		AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRestaurantView.swift; sourceTree = "<group>"; };
+		AC66F3C62C12FD5900E66967 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		AC66F3C82C130EA500E66967 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		AC950DF22BEDF96E004B9D05 /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		ACCF451E2B19D62300EFB591 /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		ACFA28482B1DA5CB0044145F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				AC3993E42BF205B9006B6128 /* AccountView.swift */,
 				AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */,
 				AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */,
+				AC66F3C62C12FD5900E66967 /* GestureView.swift */,
+				AC66F3C82C130EA500E66967 /* DraggableView.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			files = (
 				AC3993E52BF205B9006B6128 /* AccountView.swift in Sources */,
 				ACFA28502B1DC81B0044145F /* Restaurant.swift in Sources */,
+				AC66F3C92C130EA500E66967 /* DraggableView.swift in Sources */,
 				AC3754E82B20487B00E49781 /* SettingView.swift in Sources */,
 				ACFA28492B1DA5CB0044145F /* Article.swift in Sources */,
 				ACCF451F2B19D62300EFB591 /* ListContentView.swift in Sources */,
@@ -205,6 +212,7 @@
 				AC950DF32BEDF96E004B9D05 /* SettingStore.swift in Sources */,
 				AC3993E72BF20927006B6128 /* UserRegistrationViewModel.swift in Sources */,
 				ACFA28522B1DC8830044145F /* Temp.swift in Sources */,
+				AC66F3C72C12FD5900E66967 /* GestureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ struct SwiftUIDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
+            ContentListView()
 //            ListContentView()
 //            ContentView()
 //            TransitionView()

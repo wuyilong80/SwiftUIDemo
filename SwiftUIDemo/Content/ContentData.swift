@@ -21,5 +21,4 @@ struct ContentData: Identifiable {
     var title: String
     var description: String
     var mode: ContentMode
-    
 }

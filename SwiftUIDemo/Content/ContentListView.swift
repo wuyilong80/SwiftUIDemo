@@ -19,7 +19,6 @@ struct ContentListView: View {
     ]
     @State var selectedContent: ContentData?
     
-    
     var body: some View {
         NavigationView(content: {
             List {
@@ -30,12 +29,20 @@ struct ContentListView: View {
                         }
                 }
             }
-            .fullScreenCover(item: $selectedContent, content: { content in
+            .fullScreenCover(item: $selectedContent, content: { content in                
                 switch content.mode {
                 case .chapter1:
-                    Text(content.title)
+                    BaseContainerView(title: content.title) {
+                        IntroView()
+                    }
+                case .chapter2:
+                    BaseContainerView(title: content.title) {
+                        TextView()
+                    }
                 default:
-                    Text(content.title)
+                    BaseContainerView(title: content.title) {
+                        EmptyView()
+                    }
                 }
             })
             .navigationTitle("Content")

@@ -99,7 +99,6 @@
 				AC21E6AB2C18422E005103D6 /* Chapter1 */,
 				AC6EDB952C1950A80028A6D9 /* Chapter2 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
-				219DA7CE296E4CAE00560846 /* Fonts */,
 				ACCF451E2B19D62300EFB591 /* ListContentView.swift */,
 				219DA7C2296D62BC00560846 /* ContentView.swift */,
 				AC06C65C2B1EF7300094FB71 /* TransitionView.swift */,
@@ -159,6 +158,7 @@
 		AC6EDB952C1950A80028A6D9 /* Chapter2 */ = {
 			isa = PBXGroup;
 			children = (
+				219DA7CE296E4CAE00560846 /* Fonts */,
 				AC6EDB962C1952950028A6D9 /* TextView.swift */,
 			);
 			path = Chapter2;

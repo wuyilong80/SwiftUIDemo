@@ -33,11 +33,9 @@ struct BaseContainerView<Content>: View where Content: View {
                 .padding(.trailing, 15)
             })
             .frame(height: 45)
-            
-            ScrollView {
-                content()
-            }
-            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+            Spacer()
+            content()
+            Spacer()
         })
     }
 }

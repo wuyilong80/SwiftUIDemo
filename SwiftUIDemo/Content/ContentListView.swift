@@ -43,6 +43,10 @@ struct ContentListView: View {
                     BaseContainerView(title: content.title) {
                         ImageDemoView()
                     }
+                case .chapter4:
+                    BaseContainerView(title: content.title) {
+                        StackDemoView()
+                    }
                 default:
                     BaseContainerView(title: content.title) {
                         EmptyView()

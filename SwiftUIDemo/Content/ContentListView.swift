@@ -47,6 +47,10 @@ struct ContentListView: View {
                     BaseContainerView(title: content.title) {
                         StackDemoView()
                     }
+                case .chapter5:
+                    BaseContainerView(title: content.title) {
+                        ScrollDemoView()
+                    }
                 default:
                     BaseContainerView(title: content.title) {
                         EmptyView()

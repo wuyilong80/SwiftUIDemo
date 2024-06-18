@@ -15,7 +15,11 @@ struct ContentListView: View {
         ContentData(title: "Chapter 3", description: "Use Image", mode: .chapter3),
         ContentData(title: "Chapter 4", description: "Use Stack", mode: .chapter4),
         ContentData(title: "Chapter 5", description: "Use Scroll View", mode: .chapter5),
-        ContentData(title: "Chapter 6", description: "Use Button", mode: .chapter6)
+        ContentData(title: "Chapter 6", description: "Use Button", mode: .chapter6),
+        ContentData(title: "Chapter 7", description: "--", mode: .chapter7),
+        ContentData(title: "Chapter 8", description: "--", mode: .chapter8),
+        ContentData(title: "Chapter 9", description: "--", mode: .chapter9),
+        ContentData(title: "Chapter 10", description: "--", mode: .chapter10)
     ]
     @State var selectedContent: ContentData?
     
@@ -50,6 +54,10 @@ struct ContentListView: View {
                 case .chapter5:
                     BaseContainerView(title: content.title) {
                         ScrollDemoView()
+                    }
+                case .chapter6:
+                    BaseContainerView(title: content.title) {
+                        ButtonDemoView()
                     }
                 default:
                     BaseContainerView(title: content.title) {

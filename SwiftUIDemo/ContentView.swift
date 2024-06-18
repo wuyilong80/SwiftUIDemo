@@ -240,23 +240,23 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct CounterButton: View {
-    
-    @Binding var counter: Int
-    var color: Color
-    
-    var body: some View {
-        Button {
-            self.counter += 1
-        } label: {
-            Circle()
-                .frame(width: 120, height: 120)
-                .foregroundColor(color)
-                .overlay {
-                    Text("\(self.counter)")
-                        .font(.system(size: 80, weight: .medium, design: .rounded))
-                        .foregroundStyle(.white)
-                }
-        }
-    }
-}
+//struct CounterButton: View {
+//    
+//    @Binding var counter: Int
+//    var color: Color
+//    
+//    var body: some View {
+//        Button {
+//            self.counter += 1
+//        } label: {
+//            Circle()
+//                .frame(width: 120, height: 120)
+//                .foregroundColor(color)
+//                .overlay {
+//                    Text("\(self.counter)")
+//                        .font(.system(size: 80, weight: .medium, design: .rounded))
+//                        .foregroundStyle(.white)
+//                }
+//        }
+//    }
+//}

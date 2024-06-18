@@ -16,7 +16,7 @@ struct ContentListView: View {
         ContentData(title: "Chapter 4", description: "Use Stack", mode: .chapter4),
         ContentData(title: "Chapter 5", description: "Use Scroll View", mode: .chapter5),
         ContentData(title: "Chapter 6", description: "Use Button", mode: .chapter6),
-        ContentData(title: "Chapter 7", description: "--", mode: .chapter7),
+        ContentData(title: "Chapter 7", description: "State And Binding", mode: .chapter7),
         ContentData(title: "Chapter 8", description: "--", mode: .chapter8),
         ContentData(title: "Chapter 9", description: "--", mode: .chapter9),
         ContentData(title: "Chapter 10", description: "--", mode: .chapter10)
@@ -58,6 +58,10 @@ struct ContentListView: View {
                 case .chapter6:
                     BaseContainerView(title: content.title) {
                         ButtonDemoView()
+                    }
+                case .chapter7:
+                    BaseContainerView(title: content.title) {
+                        StateDemoView()
                     }
                 default:
                     BaseContainerView(title: content.title) {

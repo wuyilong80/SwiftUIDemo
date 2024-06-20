@@ -16,20 +16,20 @@ struct ListContentView: View {
         NavigationView {
             List {
                 ForEach(articles) { article in
-                    ArticleListView(article: article)
-                        .onTapGesture {
-//                            self.showDetailView = true
-                            self.selectedArticle = article
-                        }
-//                    ZStack(content: {
-//                        ArticleListView(article: article)
-//                        NavigationLink {
-//                            ArticleDetailView(article: article)
-//                        } label: {
-//                            EmptyView()
+//                    ArticleListView(article: article)
+//                        .onTapGesture {
+////                            self.showDetailView = true
+//                            self.selectedArticle = article
 //                        }
-//                        .opacity(0)
-//                    })
+                    ZStack(content: {
+                        ArticleListView(article: article)
+                        NavigationLink {
+                            ArticleDetailView(article: article)
+                        } label: {
+                            EmptyView()
+                        }
+                        .opacity(0)
+                    })
                 }
                 .listRowSeparator(.hidden)
                 .fullScreenCover(item: $selectedArticle, content: { article in

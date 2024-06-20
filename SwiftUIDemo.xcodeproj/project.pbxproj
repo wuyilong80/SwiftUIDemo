@@ -25,6 +25,10 @@
 		AC3993E92BF21A3D006B6128 /* ActionRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */; };
 		AC3B3D372C1C349E005A3B38 /* StackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B3D362C1C349E005A3B38 /* StackDemoView.swift */; };
 		AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A32C217470003A7BC8 /* StateDemoView.swift */; };
+		AC65C5A72C218C93003A7BC8 /* ShapeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */; };
+		AC65C5A92C24062B003A7BC8 /* DomeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A82C24062B003A7BC8 /* DomeShape.swift */; };
+		AC65C5AB2C240B33003A7BC8 /* ProgressShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5AA2C240B33003A7BC8 /* ProgressShape.swift */; };
+		AC65C5AD2C241369003A7BC8 /* DountChartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5AC2C241369003A7BC8 /* DountChartShape.swift */; };
 		AC66F3C72C12FD5900E66967 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66F3C62C12FD5900E66967 /* GestureView.swift */; };
 		AC66F3C92C130EA500E66967 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66F3C82C130EA500E66967 /* DraggableView.swift */; };
 		AC6EDB942C19505D0028A6D9 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6EDB932C19505D0028A6D9 /* IntroView.swift */; };
@@ -60,6 +64,10 @@
 		AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRestaurantView.swift; sourceTree = "<group>"; };
 		AC3B3D362C1C349E005A3B38 /* StackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A32C217470003A7BC8 /* StateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDemoView.swift; sourceTree = "<group>"; };
+		AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDemoView.swift; sourceTree = "<group>"; };
+		AC65C5A82C24062B003A7BC8 /* DomeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomeShape.swift; sourceTree = "<group>"; };
+		AC65C5AA2C240B33003A7BC8 /* ProgressShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressShape.swift; sourceTree = "<group>"; };
+		AC65C5AC2C241369003A7BC8 /* DountChartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DountChartShape.swift; sourceTree = "<group>"; };
 		AC66F3C62C12FD5900E66967 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
 		AC66F3C82C130EA500E66967 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		AC6EDB932C19505D0028A6D9 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 				ACD8980B2C200C1500A9840B /* Chapter5 */,
 				ACD8980E2C201A2C00A9840B /* Chapter6 */,
 				AC65C5A22C217455003A7BC8 /* Chapter7 */,
+				AC65C5A52C218C75003A7BC8 /* Chapter8 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				ACCF451E2B19D62300EFB591 /* ListContentView.swift */,
 				219DA7C2296D62BC00560846 /* ContentView.swift */,
@@ -183,6 +192,17 @@
 				AC65C5A32C217470003A7BC8 /* StateDemoView.swift */,
 			);
 			path = Chapter7;
+			sourceTree = "<group>";
+		};
+		AC65C5A52C218C75003A7BC8 /* Chapter8 */ = {
+			isa = PBXGroup;
+			children = (
+				AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */,
+				AC65C5A82C24062B003A7BC8 /* DomeShape.swift */,
+				AC65C5AA2C240B33003A7BC8 /* ProgressShape.swift */,
+				AC65C5AC2C241369003A7BC8 /* DountChartShape.swift */,
+			);
+			path = Chapter8;
 			sourceTree = "<group>";
 		};
 		AC6EDB952C1950A80028A6D9 /* Chapter2 */ = {
@@ -298,14 +318,17 @@
 				AC3754E82B20487B00E49781 /* SettingView.swift in Sources */,
 				ACFA28492B1DA5CB0044145F /* Article.swift in Sources */,
 				ACCF451F2B19D62300EFB591 /* ListContentView.swift in Sources */,
+				AC65C5AB2C240B33003A7BC8 /* ProgressShape.swift in Sources */,
 				AC3993E92BF21A3D006B6128 /* ActionRestaurantView.swift in Sources */,
 				AC06C65D2B1EF7310094FB71 /* TransitionView.swift in Sources */,
 				219DA7C3296D62BC00560846 /* ContentView.swift in Sources */,
+				AC65C5A72C218C93003A7BC8 /* ShapeDemoView.swift in Sources */,
 				219DA7C1296D62BC00560846 /* SwiftUIDemoApp.swift in Sources */,
 				AC6EDB9A2C197F1A0028A6D9 /* ImageDemoView.swift in Sources */,
 				AC3754E62B20472B00E49781 /* FormView.swift in Sources */,
 				AC3754E42B20164800E49781 /* CardView.swift in Sources */,
 				AC950DF32BEDF96E004B9D05 /* SettingStore.swift in Sources */,
+				AC65C5A92C24062B003A7BC8 /* DomeShape.swift in Sources */,
 				AC6EDB942C19505D0028A6D9 /* IntroView.swift in Sources */,
 				AC3993E72BF20927006B6128 /* UserRegistrationViewModel.swift in Sources */,
 				AC21E6B12C1852C0005103D6 /* BaseContainerView.swift in Sources */,
@@ -313,6 +336,7 @@
 				AC21E6A12C17FED6005103D6 /* ContentListView.swift in Sources */,
 				ACFA28522B1DC8830044145F /* Temp.swift in Sources */,
 				AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */,
+				AC65C5AD2C241369003A7BC8 /* DountChartShape.swift in Sources */,
 				AC66F3C72C12FD5900E66967 /* GestureView.swift in Sources */,
 				AC3B3D372C1C349E005A3B38 /* StackDemoView.swift in Sources */,
 				ACD8980D2C200C9100A9840B /* ScrollDemoView.swift in Sources */,

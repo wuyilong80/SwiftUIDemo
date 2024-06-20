@@ -162,7 +162,7 @@ struct ContentView: View {
     //    @State private var counter3: Int = 0
     
     //    var body: some View {
-    //        Path({ path in
+//            Path({ path in
     //            path.move(to: CGPoint(x: 10, y: 10))
     //            path.addQuadCurve(to: CGPoint(x: 210, y: 10), control: CGPoint(x: 100, y: 0))
     //            path.addRect(CGRect(x: 10, y: 10, width: 210, height: 50))

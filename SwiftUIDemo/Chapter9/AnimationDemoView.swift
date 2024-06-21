@@ -63,6 +63,26 @@ struct AnimationDemoView: View {
                 } label: {
                     Text("Transform")
                 }
+                
+                NavigationLink {
+                    BaseNavigationBackView {
+                        TransitionDemoView()
+                    }
+                } label: {
+                    Text("Transition")
+                }       
+                
+                NavigationLink {
+                    TransitionHomeworkOne()
+                } label: {
+                    Text("Transition Homework 1")
+                }
+                
+                NavigationLink {
+                    TransitionHomeworkTwo()
+                } label: {
+                    Text("Transition Homework 2")
+                }
             }
         })
     }

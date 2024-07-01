@@ -19,8 +19,6 @@ struct Restaurant: Identifiable {
 //    var isCheckIn: Bool = false
 }
 
-/*
-#if DEBUG
 let restaurants = [
     Restaurant(name: "Cafe Deadend", image: "cafedeadend"),
     Restaurant(name: "Homei", image: "homei"),
@@ -42,13 +40,10 @@ let restaurants = [
     Restaurant(name: "Barrafina", image: "barrafina"),
     Restaurant(name: "Donostia", image: "donostia"),
     Restaurant(name: "Royal Oak", image: "royaloak"),
-    Restaurant(name: "CASK Pub and Kitchen", image: "caskpubkitchen"),
+    Restaurant(name: "CASK Pub and Kitchen", image: "caskpubkitchen")
 ]
 
-#endif
-
-struct BasicListRow: View {
-    
+struct BasicImageRow: View {
     var restaurant: Restaurant
     
     var body: some View {
@@ -56,7 +51,7 @@ struct BasicListRow: View {
             Image(restaurant.image)
                 .resizable()
                 .frame(width: 40, height: 40)
-                .cornerRadius(5.0)
+                .clipShape(.rect(cornerRadius: 5))
             Text(restaurant.name)
         })
     }
@@ -71,14 +66,13 @@ struct FullImageRow: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 200)
-                .cornerRadius(10)
-                .overlay(
+                .clipShape(.rect(cornerRadius: 10))
+                .overlay {
                     Rectangle()
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
+                        .foregroundStyle(.black)
+                        .clipShape(.rect(cornerRadius: 10))
                         .opacity(0.2)
-                )
-            
+                }
             Text(restaurant.name)
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.black)
@@ -89,7 +83,8 @@ struct FullImageRow: View {
 
 struct RestaurantDetailView: View {
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    
     var restaurant: Restaurant
     
     var body: some View {
@@ -105,13 +100,16 @@ struct RestaurantDetailView: View {
             Spacer()
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button(action : {
-            presentationMode.wrappedValue.dismiss()
-        }){
-            Text("\(Image(systemName: "chevron.left")) \(restaurant.name)")
-                .foregroundColor(.black)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Text("\(Image(systemName: "chevron.left")) \(restaurant.name)")
+                            .foregroundColor(.black)
+                }
+            }
         })
     }
 }
- */
 

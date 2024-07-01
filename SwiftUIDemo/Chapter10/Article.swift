@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Article: Identifiable {
     var id = UUID()
@@ -25,3 +26,77 @@ let articles = [
     Article(title: "Building a Simple Text Editing App", author: "Gabriel Theodoropoulos", rating: 5, excerpt: "Today we are going to focus on a commonly used family of controls which are vital to every application. Their primary purpose is to gather user input as well as to display certain message types to users. We are going to talk about text controls.", image: "macos-programming", content: "Welcome to another tutorial where we’ll keep exploring fundamental stuff on macOS programming world. Today we are going to focus on a commonly used family of controls which are vital to every application. Their primary purpose is to gather user input as well as to display certain message types to users. We are going to talk about text controls.\n\nI don’t think there’s ever existed a meaningful application without using any kind of text control. Labels, text fields and text views are types of UI controls that are met in every application, even if not all of them are present. Due to their purpose and their intended use, text controls are usually of the first ones developers use into an app. And even though there’s not any kind of mystery or magic hidden and using them is relatively straightforward, a post dedicated to text controls is necessary so we have the chance to walk through their specific details and clear a few things out."),
     Article(title: "Building a Flutter App with Complex UI", author: "Lawrence Tan", rating: 1, excerpt: "Hello there! Welcome to the second tutorial of our Flutter series. In the last tutorial, you learned the basics of building a Flutter app. So if you have not gone through it, please take a pit stop here, visit it first before proceeding with this tutorial.", image: "flutter-app", content: "Hello there! Welcome to the second tutorial of our Flutter series. In the last tutorial, you learned the basics of building a Flutter app. So if you have not gone through it, please take a pit stop here, visit it first before proceeding with this tutorial. In today’s tutorial, we will build an app with complex UI with the Flutter framework. We will explore quite a lot of components. By going through the tutorial, you will learn to implement: Textfields with Validation, Carousel Slider, Complex List View, etc.\n\nIf any of the above raises your eyebrow, then you are here at the right place! Tighten your seatbelt as this tutorial will take you on a ride to learn all these concepts, by building an app called Moments.")
 ]
+
+struct ArticleListView: View {
+    var article: Article
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6, content: {
+            Image(article.image)
+                .resizable()
+                .frame(height: 300)
+                .clipShape(.rect(cornerRadius: 10))
+                
+            Text(article.title)
+                .font(.system(size: 30, weight: .black, design: .rounded))
+            
+            Text(article.author)
+                .font(.system(size: 20, weight: .medium, design: .rounded))
+                .foregroundStyle(.gray)
+            
+            HStack {
+                ForEach(1...article.rating, id: \.self) { index in
+                    Image(systemName: "star.fill")
+                        .foregroundStyle(.yellow)
+                }
+            }
+            
+            Text(article.excerpt)
+                .font(.system(size: 18, weight: .regular, design: .rounded))
+                .foregroundStyle(.gray)
+        })
+    }
+}
+
+struct ArticleDetailView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
+    var article: Article
+    
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 6, content: {
+                Image(article.image)
+                    .resizable()
+                    .frame(height: 300)
+                    .clipShape(.rect(cornerRadius: 10))
+                    
+                Text(article.title)
+                    .font(.system(size: 30, weight: .black, design: .rounded))
+                
+                Text(article.author)
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .foregroundStyle(.gray)
+                
+                Text(article.content)
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
+                    .foregroundStyle(.black)
+            })
+        }
+        .padding(.horizontal)
+        .ignoresSafeArea(.all, edges: .top)
+        .navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    Image(systemName: "chevron.left.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                }
+            }
+        })
+    }
+}

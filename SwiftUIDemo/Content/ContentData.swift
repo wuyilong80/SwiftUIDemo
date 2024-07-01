@@ -18,6 +18,11 @@ enum ContentMode {
     case chapter8
     case chapter9
     case chapter10
+    case chapter11
+    case chapter12
+    case chapter13
+    case chapter14
+    case chapter15
 }
 
 struct ContentData: Identifiable {

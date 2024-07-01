@@ -22,7 +22,7 @@ struct ListContentView: View {
 //                            self.selectedArticle = article
 //                        }
                     ZStack(content: {
-                        ArticleListView(article: article)
+//                        ArticleListView(article: article)
                         NavigationLink {
                             ArticleDetailView(article: article)
                         } label: {
@@ -56,30 +56,30 @@ struct ListContentView: View {
     ListContentView()
 }
 
-struct ArticleListView: View {
-    
-    var article: Article
-    
-    var body: some View {
-        VStack(alignment: .leading, content: {
-            Image(article.image)
-                .resizable()
-                .scaledToFit()
-            Text(article.title)
-                .font(.title)
-                .fontWeight(.black)
-            Text("By \(article.author)")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-            Text("stars: \(article.rating)")
-                .foregroundStyle(.yellow)
-            Text(article.excerpt)
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .lineLimit(4)
-        })
-    }
-}
+//struct ArticleListView: View {
+//    
+//    var article: Article
+//    
+//    var body: some View {
+//        VStack(alignment: .leading, content: {
+//            Image(article.image)
+//                .resizable()
+//                .scaledToFit()
+//            Text(article.title)
+//                .font(.title)
+//                .fontWeight(.black)
+//            Text("By \(article.author)")
+//                .font(.subheadline)
+//                .foregroundStyle(.secondary)
+//            Text("stars: \(article.rating)")
+//                .foregroundStyle(.yellow)
+//            Text(article.excerpt)
+//                .font(.body)
+//                .foregroundStyle(.secondary)
+//                .lineLimit(4)
+//        })
+//    }
+//}
 
 struct ArticleDetailView: View {
     

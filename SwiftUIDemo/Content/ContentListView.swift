@@ -19,7 +19,7 @@ struct ContentListView: View {
         ContentData(title: "Chapter 7", description: "State And Binding", mode: .chapter7),
         ContentData(title: "Chapter 8", description: "Shape And Path", mode: .chapter8),
         ContentData(title: "Chapter 9", description: "Animation And Transition", mode: .chapter9),
-        ContentData(title: "Chapter 10", description: "--", mode: .chapter10)
+        ContentData(title: "Chapter 10", description: "List、ForEach And Identifiable", mode: .chapter10)
     ]
     @State var selectedContent: ContentData?
     
@@ -70,6 +70,10 @@ struct ContentListView: View {
                 case .chapter9:
                     BaseContainerView(title: content.title) {
                         AnimationDemoView()
+                    }
+                case .chapter10:
+                    BaseContainerView(title: content.title) {
+                        ListDemoView()
                     }
                 default:
                     BaseContainerView(title: content.title) {

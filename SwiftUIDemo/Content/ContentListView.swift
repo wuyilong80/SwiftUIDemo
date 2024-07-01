@@ -19,7 +19,8 @@ struct ContentListView: View {
         ContentData(title: "Chapter 7", description: "State And Binding", mode: .chapter7),
         ContentData(title: "Chapter 8", description: "Shape And Path", mode: .chapter8),
         ContentData(title: "Chapter 9", description: "Animation And Transition", mode: .chapter9),
-        ContentData(title: "Chapter 10", description: "List、ForEach And Identifiable", mode: .chapter10)
+        ContentData(title: "Chapter 10", description: "List、ForEach And Identifiable", mode: .chapter10),
+        ContentData(title: "Chapter 11", description: "NavigationView", mode: .chapter11)
     ]
     @State var selectedContent: ContentData?
     
@@ -33,7 +34,7 @@ struct ContentListView: View {
                         }
                 }
             }
-            .fullScreenCover(item: $selectedContent, content: { content in                
+            .fullScreenCover(item: $selectedContent, content: { content in
                 switch content.mode {
                 case .chapter1:
                     BaseContainerView(title: content.title) {
@@ -74,6 +75,10 @@ struct ContentListView: View {
                 case .chapter10:
                     BaseContainerView(title: content.title) {
                         ListDemoView()
+                    }
+                case .chapter11:
+                    BaseContainerView(title: content.title) {
+                        NavigationDemoView()
                     }
                 default:
                     BaseContainerView(title: content.title) {

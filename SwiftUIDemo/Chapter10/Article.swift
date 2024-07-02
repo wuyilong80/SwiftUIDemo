@@ -58,7 +58,7 @@ struct ArticleListView: View {
     }
 }
 
-struct ArticleDetailView: View {
+struct ArticleDetailPushView: View {
     
     @Environment(\.dismiss) var dismiss
     
@@ -74,17 +74,19 @@ struct ArticleDetailView: View {
                     
                 Text(article.title)
                     .font(.system(size: 30, weight: .black, design: .rounded))
+                    .padding(.horizontal)
                 
                 Text(article.author)
                     .font(.system(size: 20, weight: .medium, design: .rounded))
                     .foregroundStyle(.gray)
+                    .padding(.horizontal)
                 
                 Text(article.content)
                     .font(.system(size: 18, weight: .regular, design: .rounded))
                     .foregroundStyle(.black)
+                    .padding(.horizontal)
             })
         }
-        .padding(.horizontal)
         .ignoresSafeArea(.all, edges: .top)
         .navigationBarBackButtonHidden(true)
         .toolbar(content: {
@@ -100,3 +102,61 @@ struct ArticleDetailView: View {
         })
     }
 }
+
+struct ArticleDetailPresentView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    @State private var showAlert = false
+    
+    var article: Article
+    
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 6, content: {
+                Image(article.image)
+                    .resizable()
+                    .frame(height: 300)
+                    .clipShape(.rect(cornerRadius: 10))
+                    
+                Text(article.title)
+                    .font(.system(size: 30, weight: .black, design: .rounded))
+                    .padding(.horizontal)
+                
+                Text(article.author)
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .foregroundStyle(.gray)
+                    .padding(.horizontal)
+                
+                Text(article.content)
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
+                    .foregroundStyle(.black)
+                    .padding(.horizontal)
+            })
+        }
+        .overlay(
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        self.showAlert = true
+                    }, label: {
+                        Image(systemName: "chevron.down.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    })
+                    .padding(.trailing, 20)
+                    .padding(.top, 40)
+
+                    Spacer()
+                }
+            }
+        )
+        .ignoresSafeArea(.all, edges: .top)
+        .alert(isPresented: $showAlert, content: {
+            Alert(title: Text("Reminder"), message: Text("Are you sure you are finished reading the article?"), primaryButton: .default(Text("Yes"), action: {
+                dismiss()
+            }), secondaryButton: .cancel(Text("No")))
+        })
+    }
+}
+

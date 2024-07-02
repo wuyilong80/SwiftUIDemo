@@ -14,7 +14,7 @@ struct NavigationHomework: View {
                 ZStack(content: {
                     ArticleListView(article: article)
                     NavigationLink {
-                        ArticleDetailView(article: article)
+                        ArticleDetailPushView(article: article)
                     } label: {
                         EmptyView()
                     }
@@ -25,7 +25,6 @@ struct NavigationHomework: View {
             .listStyle(.plain)
             .navigationTitle("Your Reading")
         })
-        
     }
 }
 

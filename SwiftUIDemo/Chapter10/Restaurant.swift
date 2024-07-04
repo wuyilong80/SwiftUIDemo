@@ -11,37 +11,13 @@ import SwiftUI
 struct Restaurant: Identifiable {
     var id = UUID()
     var name: String
-//    var type: String
-//    var phone: String
+    var type: String = ""
+    var phone: String = ""
     var image: String
-//    var priceLevel: Int
-//    var isFavorite: Bool = false
-//    var isCheckIn: Bool = false
+    var priceLevel: Int = 0
+    var isFavorite: Bool = false
+    var isCheckIn: Bool = false
 }
-
-let restaurants = [
-    Restaurant(name: "Cafe Deadend", image: "cafedeadend"),
-    Restaurant(name: "Homei", image: "homei"),
-    Restaurant(name: "Teakha", image: "teakha"),
-    Restaurant(name: "Cafe Loisl", image: "cafeloisl"),
-    Restaurant(name: "Petite Oyster", image: "petiteoyster"),
-    Restaurant(name: "For Kee Restaurant", image: "forkeerestaurant"),
-    Restaurant(name: "Po's Atelier", image: "posatelier"),
-    Restaurant(name: "Bourke Street Bakery", image: "bourkestreetbakery"),
-    Restaurant(name: "Haigh's Chocolate", image: "haighschocolate"),
-    Restaurant(name: "Palomino Espresso", image: "palominoespresso"),
-    Restaurant(name: "Upstate", image: "upstate"),
-    Restaurant(name: "Traif", image: "traif"),
-    Restaurant(name: "Graham Avenue Meats And Deli", image: "grahamavenuemeats"),
-    Restaurant(name: "Waffle & Wolf", image: "wafflewolf"),
-    Restaurant(name: "Five Leaves", image: "fiveleaves"),
-    Restaurant(name: "Cafe Lore", image: "cafelore"),
-    Restaurant(name: "Confessional", image: "confessional"),
-    Restaurant(name: "Barrafina", image: "barrafina"),
-    Restaurant(name: "Donostia", image: "donostia"),
-    Restaurant(name: "Royal Oak", image: "royaloak"),
-    Restaurant(name: "CASK Pub and Kitchen", image: "caskpubkitchen")
-]
 
 struct BasicImageRow: View {
     var restaurant: Restaurant
@@ -52,7 +28,44 @@ struct BasicImageRow: View {
                 .resizable()
                 .frame(width: 40, height: 40)
                 .clipShape(.rect(cornerRadius: 5))
-            Text(restaurant.name)
+            
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(restaurant.name)
+                        .font(.system(.body, design: .rounded))
+                        .bold()
+                    
+                    Text(String(repeating: "$", count: restaurant.priceLevel))
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+
+                }
+                
+                Text(restaurant.type)
+                    .font(.system(.subheadline, design: .rounded))
+                    .bold()
+                    .foregroundColor(.secondary)
+                    .lineLimit(3)
+                
+                Text(restaurant.phone)
+                    .font(.system(.subheadline, design: .rounded))
+                    .foregroundColor(.secondary)
+            }
+            
+            Spacer()
+                .layoutPriority(-100)
+            
+            if restaurant.isCheckIn {
+                Image(systemName: "checkmark.seal.fill")
+                    .foregroundColor(.red)
+            }
+            
+            if restaurant.isFavorite {
+//                    Spacer()
+                
+                Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+            }
         })
     }
 }

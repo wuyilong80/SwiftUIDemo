@@ -23,6 +23,11 @@ enum ContentMode {
     case chapter13
     case chapter14
     case chapter15
+    case chapter16
+    case chapter17
+    case chapter18
+    case chapter19
+    case chapter20
 }
 
 struct ContentData: Identifiable {
@@ -31,3 +36,21 @@ struct ContentData: Identifiable {
     var description: String
     var mode: ContentMode
 }
+
+var contents: [ContentData] = [
+    ContentData(title: "Chapter 1", description: "Intro", mode: .chapter1),
+    ContentData(title: "Chapter 2", description: "Use Text", mode: .chapter2),
+    ContentData(title: "Chapter 3", description: "Use Image", mode: .chapter3),
+    ContentData(title: "Chapter 4", description: "Use Stack", mode: .chapter4),
+    ContentData(title: "Chapter 5", description: "Use Scroll View", mode: .chapter5),
+    ContentData(title: "Chapter 6", description: "Use Button", mode: .chapter6),
+    ContentData(title: "Chapter 7", description: "State And Binding", mode: .chapter7),
+    ContentData(title: "Chapter 8", description: "Shape And Path", mode: .chapter8),
+    ContentData(title: "Chapter 9", description: "Animation And Transition", mode: .chapter9),
+    ContentData(title: "Chapter 10", description: "List、ForEach And Identifiable", mode: .chapter10),
+    ContentData(title: "Chapter 11", description: "NavigationView", mode: .chapter11),
+    ContentData(title: "Chapter 12", description: "Sheet、Alert", mode: .chapter12),
+    ContentData(title: "Chapter 13", description: "Form、Picker、Toggle And Stepper", mode: .chapter13),
+    ContentData(title: "Chapter 14", description: "Combine And Environment", mode: .chapter14),
+    ContentData(title: "Chapter 15", description: "Combine Advanced", mode: .chapter15),
+]

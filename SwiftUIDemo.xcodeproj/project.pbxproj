@@ -21,8 +21,6 @@
 		AC21E6B12C1852C0005103D6 /* BaseContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21E6B02C1852C0005103D6 /* BaseContainerView.swift */; };
 		AC3754E42B20164800E49781 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3754E32B20164800E49781 /* CardView.swift */; };
 		AC3754E82B20487B00E49781 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3754E72B20487B00E49781 /* SettingView.swift */; };
-		AC3993E52BF205B9006B6128 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E42BF205B9006B6128 /* AccountView.swift */; };
-		AC3993E72BF20927006B6128 /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */; };
 		AC3993E92BF21A3D006B6128 /* ActionRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */; };
 		AC3B3D372C1C349E005A3B38 /* StackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B3D362C1C349E005A3B38 /* StackDemoView.swift */; };
 		AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A32C217470003A7BC8 /* StateDemoView.swift */; };
@@ -51,6 +49,10 @@
 		AC9CC80F2C252EFE00E756B8 /* TransitionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CC80E2C252EFE00E756B8 /* TransitionDemoView.swift */; };
 		AC9CC8152C25617800E756B8 /* TransitionHomeworkOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CC8142C25617800E756B8 /* TransitionHomeworkOne.swift */; };
 		AC9CC8172C25619000E756B8 /* TransitionHomeworkTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CC8162C25619000E756B8 /* TransitionHomeworkTwo.swift */; };
+		ACA0AF732C37F0F1006899E4 /* Chapter15MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0AF722C37F0F1006899E4 /* Chapter15MainView.swift */; };
+		ACA0AF752C37F8C1006899E4 /* RequirementText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0AF742C37F8C1006899E4 /* RequirementText.swift */; };
+		ACA0AF772C37F90B006899E4 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0AF762C37F90B006899E4 /* FormField.swift */; };
+		ACA0AF792C37FB02006899E4 /* Chapter15ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0AF782C37FB02006899E4 /* Chapter15ViewModel.swift */; };
 		ACD8980D2C200C9100A9840B /* ScrollDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8980C2C200C9100A9840B /* ScrollDemoView.swift */; };
 		ACD898102C201A4D00A9840B /* ButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8980F2C201A4D00A9840B /* ButtonDemoView.swift */; };
 		ACF52B8E2C2D53A0005ABB07 /* ListDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF52B8D2C2D53A0005ABB07 /* ListDemoView.swift */; };
@@ -77,8 +79,6 @@
 		AC21E6B02C1852C0005103D6 /* BaseContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContainerView.swift; sourceTree = "<group>"; };
 		AC3754E32B20164800E49781 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AC3754E72B20487B00E49781 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		AC3993E42BF205B9006B6128 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
 		AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRestaurantView.swift; sourceTree = "<group>"; };
 		AC3B3D362C1C349E005A3B38 /* StackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A32C217470003A7BC8 /* StateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDemoView.swift; sourceTree = "<group>"; };
@@ -107,6 +107,10 @@
 		AC9CC80E2C252EFE00E756B8 /* TransitionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDemoView.swift; sourceTree = "<group>"; };
 		AC9CC8142C25617800E756B8 /* TransitionHomeworkOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHomeworkOne.swift; sourceTree = "<group>"; };
 		AC9CC8162C25619000E756B8 /* TransitionHomeworkTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHomeworkTwo.swift; sourceTree = "<group>"; };
+		ACA0AF722C37F0F1006899E4 /* Chapter15MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15MainView.swift; sourceTree = "<group>"; };
+		ACA0AF742C37F8C1006899E4 /* RequirementText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementText.swift; sourceTree = "<group>"; };
+		ACA0AF762C37F90B006899E4 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		ACA0AF782C37FB02006899E4 /* Chapter15ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15ViewModel.swift; sourceTree = "<group>"; };
 		ACD8980C2C200C9100A9840B /* ScrollDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDemoView.swift; sourceTree = "<group>"; };
 		ACD8980F2C201A4D00A9840B /* ButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDemoView.swift; sourceTree = "<group>"; };
 		ACF52B8D2C2D53A0005ABB07 /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
@@ -162,11 +166,10 @@
 				AC18299E2C34026800CDA6F2 /* Chapter12 */,
 				AC874C0E2C3650A7000FD1D7 /* Chapter13 */,
 				AC874C192C369BCC000FD1D7 /* Chapter14 */,
+				ACA0AF712C37F0BB006899E4 /* Chapter15 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				219DA7C4296D62BF00560846 /* Assets.xcassets */,
 				219DA7C6296D62BF00560846 /* Preview Content */,
-				AC3993E42BF205B9006B6128 /* AccountView.swift */,
-				AC3993E62BF20927006B6128 /* UserRegistrationViewModel.swift */,
 				AC3993E82BF21A3D006B6128 /* ActionRestaurantView.swift */,
 				AC66F3C62C12FD5900E66967 /* GestureView.swift */,
 				AC66F3C82C130EA500E66967 /* DraggableView.swift */,
@@ -309,6 +312,17 @@
 			path = Chapter14;
 			sourceTree = "<group>";
 		};
+		ACA0AF712C37F0BB006899E4 /* Chapter15 */ = {
+			isa = PBXGroup;
+			children = (
+				ACA0AF722C37F0F1006899E4 /* Chapter15MainView.swift */,
+				ACA0AF742C37F8C1006899E4 /* RequirementText.swift */,
+				ACA0AF762C37F90B006899E4 /* FormField.swift */,
+				ACA0AF782C37FB02006899E4 /* Chapter15ViewModel.swift */,
+			);
+			path = Chapter15;
+			sourceTree = "<group>";
+		};
 		ACD8980B2C200C1500A9840B /* Chapter5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,7 +426,6 @@
 			files = (
 				AC65C5B42C241AA8003A7BC8 /* ExplicitAnimation.swift in Sources */,
 				AC874C102C3651F7000FD1D7 /* Chapter13MainView.swift in Sources */,
-				AC3993E52BF205B9006B6128 /* AccountView.swift in Sources */,
 				AC65C5BA2C2434B5003A7BC8 /* BaseNavigationBackView.swift in Sources */,
 				AC65C5BE2C243771003A7BC8 /* DelayAnimation.swift in Sources */,
 				ACF52B922C2D6F4E005ABB07 /* ListHomework.swift in Sources */,
@@ -420,6 +433,7 @@
 				AC6EDB972C1952950028A6D9 /* TextDemoView.swift in Sources */,
 				AC18299B2C32824600CDA6F2 /* NavigationRestaurantView.swift in Sources */,
 				ACFA28502B1DC81B0044145F /* Restaurant.swift in Sources */,
+				ACA0AF772C37F90B006899E4 /* FormField.swift in Sources */,
 				AC66F3C92C130EA500E66967 /* DraggableView.swift in Sources */,
 				AC3754E82B20487B00E49781 /* SettingView.swift in Sources */,
 				ACFA28492B1DA5CB0044145F /* Article.swift in Sources */,
@@ -437,7 +451,6 @@
 				AC65C5A92C24062B003A7BC8 /* DomeShape.swift in Sources */,
 				AC6EDB942C19505D0028A6D9 /* IntroView.swift in Sources */,
 				ACF52B8E2C2D53A0005ABB07 /* ListDemoView.swift in Sources */,
-				AC3993E72BF20927006B6128 /* UserRegistrationViewModel.swift in Sources */,
 				AC21E6B12C1852C0005103D6 /* BaseContainerView.swift in Sources */,
 				ACD898102C201A4D00A9840B /* ButtonDemoView.swift in Sources */,
 				AC65C5B82C24259C003A7BC8 /* RectangleProgressAnimation.swift in Sources */,
@@ -445,6 +458,8 @@
 				AC65C5C02C2437A7003A7BC8 /* TransformAnimation.swift in Sources */,
 				AC1829992C325ACF00CDA6F2 /* NavigationDemoView.swift in Sources */,
 				AC21E6A12C17FED6005103D6 /* ContentListView.swift in Sources */,
+				ACA0AF792C37FB02006899E4 /* Chapter15ViewModel.swift in Sources */,
+				ACA0AF752C37F8C1006899E4 /* RequirementText.swift in Sources */,
 				AC1829A02C34032D00CDA6F2 /* AlertDemoView.swift in Sources */,
 				AC9CC8172C25619000E756B8 /* TransitionHomeworkTwo.swift in Sources */,
 				AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */,
@@ -457,6 +472,7 @@
 				AC3B3D372C1C349E005A3B38 /* StackDemoView.swift in Sources */,
 				ACD8980D2C200C9100A9840B /* ScrollDemoView.swift in Sources */,
 				AC21E6A92C17FFD7005103D6 /* ContentData.swift in Sources */,
+				ACA0AF732C37F0F1006899E4 /* Chapter15MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

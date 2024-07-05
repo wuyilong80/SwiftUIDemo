@@ -1,14 +1,15 @@
 //
-//  UserRegistrationViewModel.swift
+//  Chapter15ViewModel.swift
 //  SwiftUIDemo
 //
-//  Created by Lawrence Wu 吳易隆 on 2024/5/13.
+//  Created by Lawrence Wu 吳易隆 on 2024/7/5.
 //
 
-import UIKit
+import Foundation
 import Combine
+import SwiftUI
 
-class UserRegistrationViewModel: ObservableObject {
+class Chapter15ViewModel: ObservableObject {
     // 輸入
     @Published var username = ""
     @Published var password = ""

@@ -1,5 +1,5 @@
 //
-//  Chapter13DemoView.swift
+//  Chapter14MainView.swift
 //  SwiftUIDemo
 //
 //  Created by Lawrence Wu 吳易隆 on 2024/7/4.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Chapter13DemoView: View {
+struct Chapter14MainView: View {
     
     @State private var restaurants = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", phone: "232-923423", image: "cafedeadend", priceLevel: 3),
@@ -33,13 +33,16 @@ struct Chapter13DemoView: View {
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", phone: "432-344050", image: "caskpubkitchen", priceLevel: 1)
         ]
     
+    @EnvironmentObject var settingStore: SettingStore
+    
     @State private var selectedRestaurant: Restaurant?
     @State private var showSettings = false
     
     var body: some View {
         NavigationView(content: {
             List {
-                ForEach(restaurants) { restaurant in
+                ForEach(restaurants.sorted(by: self.settingStore.displayOrder.predicate())) { restaurant in
+                    if self.shouldShowItem(restaurant: restaurant) {
                         BasicImageRow(restaurant: restaurant)
                         .contextMenu {
                             Button(action: {
@@ -76,6 +79,7 @@ struct Chapter13DemoView: View {
                         .onTapGesture {
                             self.selectedRestaurant = restaurant
                         }
+                    }
                 }
                 .onDelete(perform: { indexSet in
                     self.restaurants.remove(atOffsets: indexSet)
@@ -93,7 +97,7 @@ struct Chapter13DemoView: View {
                 }
             })
             .sheet(isPresented: $showSettings, content: {
-                SettingView()
+                NewSettingView().environmentObject(self.settingStore)
             })
         })
     }
@@ -115,8 +119,12 @@ struct Chapter13DemoView: View {
             self.restaurants[index].isCheckIn.toggle()
         }
     }
+    
+    private func shouldShowItem(restaurant: Restaurant) -> Bool {
+        return (!self.settingStore.showCheckinOnly || restaurant.isCheckIn) && (restaurant.priceLevel <= self.settingStore.maxPriceLevel)
+    }
 }
 
 #Preview {
-    Chapter13DemoView()
+    Chapter14MainView().environmentObject(SettingStore())
 }

@@ -22,9 +22,12 @@ struct ContentListView: View {
         ContentData(title: "Chapter 10", description: "List、ForEach And Identifiable", mode: .chapter10),
         ContentData(title: "Chapter 11", description: "NavigationView", mode: .chapter11),
         ContentData(title: "Chapter 12", description: "Sheet、Alert", mode: .chapter12),
-        ContentData(title: "Chapter 13", description: "Form、Picker、Toggle And Stepper", mode: .chapter13)
+        ContentData(title: "Chapter 13", description: "Form、Picker、Toggle And Stepper", mode: .chapter13),
+        ContentData(title: "Chapter 14", description: "Combine And Environment", mode: .chapter14),
     ]
     @State var selectedContent: ContentData?
+    
+    var settingStore = SettingStore()
     
     var body: some View {
         NavigationView(content: {
@@ -88,7 +91,11 @@ struct ContentListView: View {
                     }
                 case .chapter13:
                     BaseContainerView(title: content.title) {
-                        Chapter13DemoView()
+                        Chapter13MainView()
+                    }
+                case .chapter14:
+                    BaseContainerView(title: content.title)  {
+                        Chapter14MainView().environmentObject(self.settingStore)
                     }
                 default:
                     BaseContainerView(title: content.title) {

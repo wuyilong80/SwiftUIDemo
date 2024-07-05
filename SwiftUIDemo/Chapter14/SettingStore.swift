@@ -36,6 +36,17 @@ enum DisplayOrderType: Int, CaseIterable {
             return "Show Check-in First"
         }
     }
+    
+    func predicate() -> ((Restaurant, Restaurant) -> Bool) {
+        switch self {
+        case .alphabetical:
+            return { $0.name < $1.name }
+        case .favoriteFirst:
+            return { $0.isFavorite && !$1.isFavorite }
+        case .checkInFirst:
+            return { $0.isCheckIn && !$1.isCheckIn }
+        }
+    }
 }
 
 class SettingStore: ObservableObject {

@@ -95,6 +95,27 @@ struct Chapter16MainView: View {
                             .cancel()
                         ])
                     })
+                
+//                    .confirmationDialog("test", isPresented: $showActionSheet) {
+//                        Button {
+//                            
+//                        } label: {
+//                            Text("1111")
+//                        }
+//                        
+//                        Button {
+//                            
+//                        } label: {
+//                            Text("2222")
+//                        }
+//                        
+//                        Button {
+//                            
+//                        } label: {
+//                            Text("3333")
+//                        }
+//
+//                    }
             }
             /// onDelete only use on ForEach
             .onDelete(perform: { indexSet in

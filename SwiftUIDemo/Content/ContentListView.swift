@@ -85,6 +85,10 @@ struct ContentListView: View {
                     BaseContainerView(title: content.title) {
                         Chapter15MainView()
                     }
+                case .chapter16:
+                    BaseContainerView(title: content.title) {
+                        Chapter16MainView()
+                    }
                 default:
                     BaseContainerView(title: content.title) {
                         EmptyView()

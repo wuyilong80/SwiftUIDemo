@@ -61,7 +61,7 @@ struct BasicImageRow: View {
             }
             
             if restaurant.isFavorite {
-//                    Spacer()
+                Spacer()
                 
                 Image(systemName: "star.fill")
                 .foregroundColor(.yellow)

@@ -24,75 +24,8 @@ struct ContentListView: View {
                 }
             }
             .fullScreenCover(item: $selectedContent, content: { content in
-                switch content.mode {
-                case .chapter1:
-                    BaseContainerView(title: content.title) {
-                        IntroView()
-                    }
-                case .chapter2:
-                    BaseContainerView(title: content.title) {
-                        TextDemoView()
-                    }
-                case .chapter3:
-                    BaseContainerView(title: content.title) {
-                        ImageDemoView()
-                    }
-                case .chapter4:
-                    BaseContainerView(title: content.title) {
-                        StackDemoView()
-                    }
-                case .chapter5:
-                    BaseContainerView(title: content.title) {
-                        ScrollDemoView()
-                    }
-                case .chapter6:
-                    BaseContainerView(title: content.title) {
-                        ButtonDemoView()
-                    }
-                case .chapter7:
-                    BaseContainerView(title: content.title) {
-                        StateDemoView()
-                    }
-                case .chapter8:
-                    BaseContainerView(title: content.title) {
-                        ShapeDemoView()
-                    }
-                case .chapter9:
-                    BaseContainerView(title: content.title) {
-                        AnimationDemoView()
-                    }
-                case .chapter10:
-                    BaseContainerView(title: content.title) {
-                        ListDemoView()
-                    }
-                case .chapter11:
-                    BaseContainerView(title: content.title) {
-                        NavigationDemoView()
-                    }
-                case .chapter12:
-                    BaseContainerView(title: content.title) {
-                        AlertDemoView()
-                    }
-                case .chapter13:
-                    BaseContainerView(title: content.title) {
-                        Chapter13MainView()
-                    }
-                case .chapter14:
-                    BaseContainerView(title: content.title)  {
-                        Chapter14MainView().environmentObject(self.settingStore)
-                    }
-                case .chapter15:
-                    BaseContainerView(title: content.title) {
-                        Chapter15MainView()
-                    }
-                case .chapter16:
-                    BaseContainerView(title: content.title) {
-                        Chapter16MainView()
-                    }
-                default:
-                    BaseContainerView(title: content.title) {
-                        EmptyView()
-                    }
+                BaseContainerView(title: content.title) {
+                    content.contentView
                 }
             })
             .navigationTitle("Content")

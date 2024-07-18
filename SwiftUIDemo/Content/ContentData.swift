@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum ContentMode {
     case chapter1
@@ -35,6 +36,48 @@ struct ContentData: Identifiable {
     var title: String
     var description: String
     var mode: ContentMode
+    
+    @ViewBuilder
+    var contentView: some View {
+        switch mode {
+        case .chapter1:
+            IntroView()
+        case .chapter2:
+            TextDemoView()
+        case .chapter3:
+            ImageDemoView()
+        case .chapter4:
+            StackDemoView()
+        case .chapter5:
+            ScrollDemoView()
+        case .chapter6:
+            ButtonDemoView()
+        case .chapter7:
+            StateDemoView()
+        case .chapter8:
+            ShapeDemoView()
+        case .chapter9:
+            AnimationDemoView()
+        case .chapter10:
+            ListDemoView()
+        case .chapter11:
+            NavigationDemoView()
+        case .chapter12:
+            AlertDemoView()
+        case .chapter13:
+            Chapter13MainView()
+        case .chapter14:
+            Chapter14MainView().environmentObject(SettingStore())
+        case .chapter15:
+            Chapter15MainView()
+        case .chapter16:
+            Chapter16MainView()
+        case .chapter17:
+            EmptyView()
+        default:
+            EmptyView()
+        }
+    }
 }
 
 var contents: [ContentData] = [
@@ -53,5 +96,6 @@ var contents: [ContentData] = [
     ContentData(title: "Chapter 13", description: "Form、Picker、Toggle and Stepper", mode: .chapter13),
     ContentData(title: "Chapter 14", description: "Combine and Environment", mode: .chapter14),
     ContentData(title: "Chapter 15", description: "Combine Advanced", mode: .chapter15),
-    ContentData(title: "Chapter 16", description: "Slide Delete、Action Sheet and Context Menu", mode: .chapter16)
+    ContentData(title: "Chapter 16", description: "Slide Delete、Action Sheet and Context Menu", mode: .chapter16),
+    ContentData(title: "Chapter 17", description: "Gesture", mode: .chapter17)
 ]

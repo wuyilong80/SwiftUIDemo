@@ -73,9 +73,6 @@ struct DraggableView<Content>: View where Content: View {
 
 #Preview {
     DraggableView() {
-//        Image(systemName: "star.circle.fill")
-//            .font(.system(size: 100))
-//            .foregroundColor(.green)
         Text("Swift")
             .font(.system(size: 50, weight: .bold, design: .rounded))
             .bold()

@@ -73,7 +73,7 @@ struct ContentData: Identifiable {
         case .chapter16:
             Chapter16MainView()
         case .chapter17:
-            EmptyView()
+            Chapter17MainView()
         default:
             EmptyView()
         }

@@ -9,57 +9,60 @@ import SwiftUI
 
 struct StackDemoView: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 15.0) {
-                StockHeaderView()
-                HStack(spacing: 15.0) {
-                    PriceView(title: "Basic", price: "$9", textColor: .white, backColor: .purple)
-                    
-                    ZStack{
-                        PriceView(title: "Pro", price: "$19", textColor: .black, backColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+        VStack {
+            ContentCloseView()
+            ScrollView {
+                VStack(spacing: 15.0) {
+                    StockHeaderView()
+                    HStack(spacing: 15.0) {
+                        PriceView(title: "Basic", price: "$9", textColor: .white, backColor: .purple)
                         
-                        Text("Best for designer")
+                        ZStack{
+                            PriceView(title: "Pro", price: "$19", textColor: .black, backColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+                            
+                            Text("Best for designer")
+                                .font(.system(.caption, design: .rounded))
+                                .fontWeight(.bold)
+                                .foregroundStyle(.white)
+                                .padding(5)
+                                .background(Color(red: 255/255, green: 183/255, blue: 37/255))
+                                .offset(x: 0, y: 87)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    ZStack(content: {
+                        PriceView(image: "wand.and.rays", title: "Team", price: "$299", textColor: .white, backColor: .black)
+                            .padding(.horizontal)
+                        
+                        Text("Perfect for teams with 20 members")
                             .font(.system(.caption, design: .rounded))
                             .fontWeight(.bold)
                             .foregroundStyle(.white)
                             .padding(5)
                             .background(Color(red: 255/255, green: 183/255, blue: 37/255))
-                            .offset(x: 0, y: 87)
-                    }
+                            .offset(x: 0, y: 110)
+                    })
                 }
-                .padding(.horizontal)
+                Spacer(minLength:300)
                 
                 ZStack(content: {
-                    PriceView(image: "wand.and.rays", title: "Team", price: "$299", textColor: .white, backColor: .black)
-                        .padding(.horizontal)
+                    PriceView(image: "burst.fill", title: "Basic", price: "$9", textColor: .white, backColor: .purple)
+                        .padding()
+                        .offset(x: 0, y: 180)
                     
-                    Text("Perfect for teams with 20 members")
-                        .font(.system(.caption, design: .rounded))
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .padding(5)
-                        .background(Color(red: 255/255, green: 183/255, blue: 37/255))
-                        .offset(x: 0, y: 110)
+                    PriceView(image: "dial", title: "Pro", price: "$19", textColor: .white, backColor: Color(red: 255/255, green: 183/255, blue: 37/255))
+                        .padding()
+                        .scaleEffect(0.95)
+                    
+                    PriceView(image: "wand.and.rays", title: "Team", price: "$299", textColor: .white, backColor: Color(red: 62/255, green: 63/255, blue: 70/255))
+                        .padding()
+                        .scaleEffect(0.9)
+                        .offset(x: 0, y: -180)
                 })
+                
+                Spacer(minLength: 300)
             }
-            Spacer(minLength:300)
-            
-            ZStack(content: {
-                PriceView(image: "burst.fill", title: "Basic", price: "$9", textColor: .white, backColor: .purple)
-                    .padding()
-                    .offset(x: 0, y: 180)
-                
-                PriceView(image: "dial", title: "Pro", price: "$19", textColor: .white, backColor: Color(red: 255/255, green: 183/255, blue: 37/255))
-                    .padding()
-                    .scaleEffect(0.95)
-                
-                PriceView(image: "wand.and.rays", title: "Team", price: "$299", textColor: .white, backColor: Color(red: 62/255, green: 63/255, blue: 70/255))
-                    .padding()
-                    .scaleEffect(0.9)
-                    .offset(x: 0, y: -180)
-            })
-            
-            Spacer(minLength: 300)
         }
     }
 }

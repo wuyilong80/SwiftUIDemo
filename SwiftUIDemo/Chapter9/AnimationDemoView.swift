@@ -9,81 +9,71 @@ import SwiftUI
 
 struct AnimationDemoView: View {
     var body: some View {
-        NavigationView(content: {
-            List {
-                NavigationLink {
-                    ImplicitAnimation()
-                } label: {
-                    Text("Implicit")
-                }
-                
-                NavigationLink {
-                    ExplicitAnimation()
-                } label: {
-                    Text("Explicit")
-                }
-                                
-                NavigationLink {
-                    BaseNavigationBackView {
-                        RotationEffectAnimation()
+        VStack(content: {
+            ContentCloseView()
+            NavigationView(content: {
+                List {
+                    NavigationLink {
+                        ImplicitAnimation()
+                    } label: {
+                        Text("Implicit")
                     }
                     
-                } label: {
-                    Text("Rotation Effect")
-                }
-
-                NavigationLink {
-                    BaseNavigationBackView {
+                    NavigationLink {
+                        ExplicitAnimation()
+                    } label: {
+                        Text("Explicit")
+                    }
+                    
+                    NavigationLink {
+                        RotationEffectAnimation()
+                    } label: {
+                        Text("Rotation Effect")
+                    }
+                    
+                    NavigationLink {
                         RectangleProgressAnimation()
+                    } label: {
+                        Text("Rectangle Progress")
                     }
-                } label: {
-                    Text("Rectangle Progress")
-                }
-
-                NavigationLink {
-                    BaseNavigationBackView {
+                    
+                    NavigationLink {
                         ProgressIndicatorAnimation()
+                    } label: {
+                        Text("Progress Indicator")
                     }
-                } label: {
-                    Text("Progress Indicator")
-                }
-
-                NavigationLink {
-                    BaseNavigationBackView {
+                    
+                    NavigationLink {
                         DelayAnimation()
+                    } label: {
+                        Text("Delay")
                     }
-                } label: {
-                    Text("Delay")
-                }
-                
-                NavigationLink {
-                    BaseNavigationBackView {
+                    
+                    NavigationLink {
                         TransformAnimation()
+                    } label: {
+                        Text("Transform")
                     }
-                } label: {
-                    Text("Transform")
-                }
-                
-                NavigationLink {
-                    BaseNavigationBackView {
+                    
+                    NavigationLink {
                         TransitionDemoView()
+                    } label: {
+                        Text("Transition")
                     }
-                } label: {
-                    Text("Transition")
-                }       
-                
-                NavigationLink {
-                    TransitionHomeworkOne()
-                } label: {
-                    Text("Transition Homework 1")
+                    
+                    NavigationLink {
+                        TransitionHomeworkOne()
+                    } label: {
+                        Text("Transition Homework 1")
+                    }
+                    
+                    NavigationLink {
+                        TransitionHomeworkTwo()
+                    } label: {
+                        Text("Transition Homework 2")
+                    }
                 }
-                
-                NavigationLink {
-                    TransitionHomeworkTwo()
-                } label: {
-                    Text("Transition Homework 2")
-                }
-            }
+            })
         })
     }
 }

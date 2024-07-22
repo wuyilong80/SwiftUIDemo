@@ -37,64 +37,67 @@ struct Chapter13MainView: View {
     @State private var showSettings = false
     
     var body: some View {
-        NavigationView(content: {
-            List {
-                ForEach(restaurants) { restaurant in
-                        BasicImageRow(restaurant: restaurant)
-                        .contextMenu {
-                            Button(action: {
-                                // mark the selected restaurant as check-in
-                                self.checkIn(item: restaurant)
-                            }) {
-                                HStack {
-                                    Text("Check-in")
-                                    Image(systemName: "checkmark.seal.fill")
+        ZStack(alignment: .top, content: {
+            NavigationView(content: {
+                List {
+                    ForEach(restaurants) { restaurant in
+                            BasicImageRow(restaurant: restaurant)
+                            .contextMenu {
+                                Button(action: {
+                                    // mark the selected restaurant as check-in
+                                    self.checkIn(item: restaurant)
+                                }) {
+                                    HStack {
+                                        Text("Check-in")
+                                        Image(systemName: "checkmark.seal.fill")
+                                    }
                                 }
-                            }
-                            
-                            Button(action: {
-                                // delete the selected restaurant
-                                self.delete(item: restaurant)
-                            }) {
-                                HStack {
-                                    Text("Delete")
-                                    Image(systemName: "trash")
-                                }
-                            }
-                                             
-                            Button(action: {
-                                // mark the selected restaurant as favorite
-                                self.setFavorite(item: restaurant)
                                 
-                            }) {
-                                HStack {
-                                    Text("Favorite")
-                                    Image(systemName: "star")
+                                Button(action: {
+                                    // delete the selected restaurant
+                                    self.delete(item: restaurant)
+                                }) {
+                                    HStack {
+                                        Text("Delete")
+                                        Image(systemName: "trash")
+                                    }
+                                }
+                                                 
+                                Button(action: {
+                                    // mark the selected restaurant as favorite
+                                    self.setFavorite(item: restaurant)
+                                    
+                                }) {
+                                    HStack {
+                                        Text("Favorite")
+                                        Image(systemName: "star")
+                                    }
                                 }
                             }
-                        }
-                        .onTapGesture {
-                            self.selectedRestaurant = restaurant
-                        }
-                }
-                .onDelete(perform: { indexSet in
-                    self.restaurants.remove(atOffsets: indexSet)
-                })
-            }
-            .navigationTitle("Restaurant")
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        self.showSettings = true
-                    }, label: {
-                        Image(systemName: "gear").font(.title2)
-                            .foregroundColor(.black)
+                            .onTapGesture {
+                                self.selectedRestaurant = restaurant
+                            }
+                    }
+                    .onDelete(perform: { indexSet in
+                        self.restaurants.remove(atOffsets: indexSet)
                     })
                 }
+                .navigationTitle("Restaurant")
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            self.showSettings = true
+                        }, label: {
+                            Image(systemName: "gear").font(.title2)
+                                .foregroundColor(.black)
+                        })
+                    }
+                })
+                .sheet(isPresented: $showSettings, content: {
+                    SettingView()
+                })
             })
-            .sheet(isPresented: $showSettings, content: {
-                SettingView()
-            })
+            ContentCloseView()
         })
     }
     

@@ -9,6 +9,10 @@ import SwiftUI
 
 struct IntroView: View {
     var body: some View {
+        VStack(content: {
+            ContentCloseView()
+        })
+        Spacer()
         VStack(spacing: 10, content: {
             Text("This is a Demo App for practice SwiftUI")
                 .font(.system(.title3))
@@ -16,6 +20,7 @@ struct IntroView: View {
                 .font(.system(size: 12))
                 .foregroundColor(.gray)
         })
+        Spacer()
     }
 }
 

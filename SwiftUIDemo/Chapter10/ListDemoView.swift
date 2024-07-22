@@ -9,24 +9,23 @@ import SwiftUI
 
 struct ListDemoView: View {
     var body: some View {
-        NavigationView(content: {
-            List {
-                NavigationLink {
-                    BaseNavigationBackView {
+        ZStack(alignment: .top, content: {
+            NavigationView(content: {
+                List {
+                    NavigationLink {
                         ListView()
+                    } label: {
+                        Text("Resturant List View")
                     }
-                } label: {
-                    Text("Resturant List View")
-                }
-                
-                NavigationLink {
-                    BaseNavigationBackView {
+                    
+                    NavigationLink {
                         ListHomework()
+                    } label: {
+                        Text("Homework")
                     }
-                } label: {
-                    Text("Homework")
                 }
-            }
+            })
+            ContentCloseView()
         })
     }
 }

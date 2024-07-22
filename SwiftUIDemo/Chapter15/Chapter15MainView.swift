@@ -13,6 +13,7 @@ struct Chapter15MainView: View {
     
     var body: some View {
         VStack {
+            ContentCloseView()
             Text("Create an account")
                 .font(.system(.largeTitle, design: .rounded))
                 .bold()

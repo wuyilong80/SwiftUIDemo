@@ -9,67 +9,69 @@ import SwiftUI
 
 struct ButtonDemoView: View {
     var body: some View {
-        VStack(spacing: 15, content: {
-            Button(action: {
-                print("Hello world tapped")
-            }, label: {
-                Text("Hello world")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding()
-                    .background(.purple)
-                    .clipShape(.rect(cornerRadius: 40))
-                    .foregroundStyle(.white)
-                    .padding(10)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(.purple, lineWidth: 5)
+        VStack {
+            ContentCloseView()
+            VStack(spacing: 15, content: {
+                Button(action: {
+                    print("Hello world tapped")
+                }, label: {
+                    Text("Hello world")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding()
+                        .background(.purple)
+                        .clipShape(.rect(cornerRadius: 40))
+                        .foregroundStyle(.white)
+                        .padding(10)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 40)
+                                .stroke(.purple, lineWidth: 5)
+                        }
+                })
+                
+                Button(action: {
+                    print("Delete button tapped")
+                }, label: {
+                    HStack {
+                        Image(systemName: "trash")
+                            .font(.title)
+                        Text("Delete")
+                            .font(.title)
+                            .fontWeight(.semibold)
                     }
-            })
-            
-            Button(action: {
-                print("Delete button tapped")
-            }, label: {
-                HStack {
-                    Image(systemName: "trash")
-                        .font(.title)
-                    Text("Delete")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                }
-                .padding()
-                .foregroundStyle(.white)
-                .background(.red)
-                .clipShape(.rect(cornerRadius: 40))
-            })
-            
-            Button {
-                print("Delete button tapped")
-            } label: {
-                Label {
-                    Text("Delete")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                } icon: {
-                    Image(systemName: "trash")
-                        .font(.title)
-                }
-            }
-            .buttonStyle(GradientBackgroundStyle())
-            
-            Button(action: {
-                print("Button Rotate")
-            }, label: {
-                Image(systemName: "plus")
-                    .font(.largeTitle)
                     .padding()
                     .foregroundStyle(.white)
-                    .background(.purple)
-                    .clipShape(Circle())
+                    .background(.red)
+                    .clipShape(.rect(cornerRadius: 40))
+                })
+                
+                Button {
+                    print("Delete button tapped")
+                } label: {
+                    Label {
+                        Text("Delete")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    } icon: {
+                        Image(systemName: "trash")
+                            .font(.title)
+                    }
+                }
+                .buttonStyle(GradientBackgroundStyle())
+                
+                Button(action: {
+                    print("Button Rotate")
+                }, label: {
+                    Image(systemName: "plus")
+                        .font(.largeTitle)
+                        .padding()
+                        .foregroundStyle(.white)
+                        .background(.purple)
+                        .clipShape(Circle())
+                })
+                .buttonStyle(RotateButton())
             })
-            .buttonStyle(RotateButton())
-            
-        })
+        }
     }
 }
 

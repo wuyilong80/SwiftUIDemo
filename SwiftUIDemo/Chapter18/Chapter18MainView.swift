@@ -13,36 +13,39 @@ struct Chapter18MainView: View {
     @State private var selectedRestaurant: NewRestaurant?
     
     var body: some View {
-        ZStack(content: {
-            NavigationView(content: {
-                List {
-                    ForEach(newRestaurants) { restaurant in
-                        NewBasicImageRow(restaurant: restaurant)
-                            .onTapGesture {
-                                self.showDetail = true
-                                self.selectedRestaurant = restaurant
-                            }
+        ZStack(alignment: .top) {
+            ZStack(content: {
+                NavigationView(content: {
+                    List {
+                        ForEach(newRestaurants) { restaurant in
+                            NewBasicImageRow(restaurant: restaurant)
+                                .onTapGesture {
+                                    self.showDetail = true
+                                    self.selectedRestaurant = restaurant
+                                }
+                        }
                     }
-                }
-                .listStyle(.plain)
-                .navigationTitle("Restaurant")
-            })
-            .offset(y: showDetail ? -100 : 0)
-            .animation(.easeOut(duration: 0.2))
-            
-            if showDetail {
-                BlankView(bgColor: .black)
-                    .opacity(0.5)
-                    .onTapGesture {
-                        self.showDetail = false
-                    }
+                    .listStyle(.plain)
+                    .navigationTitle("Restaurant")
+                })
+                .offset(y: showDetail ? -100 : 0)
+                .animation(.easeOut(duration: 0.2))
                 
-                if let restaurant = selectedRestaurant {
-                    RestaurantBottomSheet(restautant: restaurant, isShow: $showDetail)
-                        .transition(.move(edge: .bottom))
+                if showDetail {
+                    BlankView(bgColor: .black)
+                        .opacity(0.5)
+                        .onTapGesture {
+                            self.showDetail = false
+                        }
+                    
+                    if let restaurant = selectedRestaurant {
+                        RestaurantBottomSheet(restautant: restaurant, isShow: $showDetail)
+                            .transition(.move(edge: .bottom))
+                    }
                 }
-            }
-        })
+            })
+            ContentCloseView()
+        }
     }
 }
 

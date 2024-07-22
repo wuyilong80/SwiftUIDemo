@@ -37,92 +37,95 @@ struct Chapter16MainView: View {
     @State private var showActionSheet = false
     
     var body: some View {
-        List {
-            ForEach(restaurants) { restaurant in
-                BasicImageRow(restaurant: restaurant)
-                    .contextMenu(ContextMenu(menuItems: {
-                        Button(action: {
-                            self.delete(item: restaurant)
-                        }, label: {
-                            HStack(content: {
-                                Text("Delete")
-                                Image(systemName: "trash")
+        VStack(content: {
+            ContentCloseView()
+            List {
+                ForEach(restaurants) { restaurant in
+                    BasicImageRow(restaurant: restaurant)
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button(action: {
+                                self.delete(item: restaurant)
+                            }, label: {
+                                HStack(content: {
+                                    Text("Delete")
+                                    Image(systemName: "trash")
+                                })
                             })
-                        })
-                        
-                        Button(action: {
-                            self.setFavorite(item: restaurant)
-                        }, label: {
-                            HStack(content: {
-                                Text("Favorite")
-                                Image(systemName: "star")
+                            
+                            Button(action: {
+                                self.setFavorite(item: restaurant)
+                            }, label: {
+                                HStack(content: {
+                                    Text("Favorite")
+                                    Image(systemName: "star")
+                                })
                             })
-                        })
-                        
-                        Button(action: {
-                            self.setCheckin(item: restaurant)
-                        }, label: {
-                            HStack(content: {
-                                Text("Check-in")
-                                Image(systemName: "checkmark.seal.fill")
+                            
+                            Button(action: {
+                                self.setCheckin(item: restaurant)
+                            }, label: {
+                                HStack(content: {
+                                    Text("Check-in")
+                                    Image(systemName: "checkmark.seal.fill")
+                                })
                             })
+                        }))
+                        .onTapGesture {
+                            self.showActionSheet.toggle()
+                            self.selectedRestaurant = restaurant
+                        }
+                        .actionSheet(isPresented: $showActionSheet, content: {
+                            ActionSheet(title: Text("What do you want to do"), message: nil, buttons: [
+                                .default(Text("Mark as Favorite"), action: {
+                                    if let selectedRestaurant = self.selectedRestaurant {
+                                        self.setFavorite(item: selectedRestaurant)
+                                    }
+                                }),
+                                
+                                .default(Text("Check-in"), action: {
+                                    if let selectedRestaurant = self.selectedRestaurant {
+                                        self.setCheckin(item: selectedRestaurant)
+                                    }
+                                }),
+                                
+                                .destructive(Text("Delete"), action: {
+                                    if let selectedRestaurant = self.selectedRestaurant {
+                                        self.delete(item: selectedRestaurant)
+                                    }
+                                }),
+                                
+                                .cancel()
+                            ])
                         })
-                    }))
-                    .onTapGesture {
-                        self.showActionSheet.toggle()
-                        self.selectedRestaurant = restaurant
-                    }
-                    .actionSheet(isPresented: $showActionSheet, content: {
-                        ActionSheet(title: Text("What do you want to do"), message: nil, buttons: [
-                            .default(Text("Mark as Favorite"), action: {
-                                if let selectedRestaurant = self.selectedRestaurant {
-                                    self.setFavorite(item: selectedRestaurant)
-                                }
-                            }),
-                            
-                            .default(Text("Check-in"), action: {
-                                if let selectedRestaurant = self.selectedRestaurant {
-                                    self.setCheckin(item: selectedRestaurant)
-                                }
-                            }),
-                            
-                            .destructive(Text("Delete"), action: {
-                                if let selectedRestaurant = self.selectedRestaurant {
-                                    self.delete(item: selectedRestaurant)
-                                }
-                            }),
-                            
-                            .cancel()
-                        ])
-                    })
-                
-//                    .confirmationDialog("test", isPresented: $showActionSheet) {
-//                        Button {
-//                            
-//                        } label: {
-//                            Text("1111")
-//                        }
-//                        
-//                        Button {
-//                            
-//                        } label: {
-//                            Text("2222")
-//                        }
-//                        
-//                        Button {
-//                            
-//                        } label: {
-//                            Text("3333")
-//                        }
-//
-//                    }
+                    
+    //                    .confirmationDialog("test", isPresented: $showActionSheet) {
+    //                        Button {
+    //
+    //                        } label: {
+    //                            Text("1111")
+    //                        }
+    //
+    //                        Button {
+    //
+    //                        } label: {
+    //                            Text("2222")
+    //                        }
+    //
+    //                        Button {
+    //
+    //                        } label: {
+    //                            Text("3333")
+    //                        }
+    //
+    //                    }
+                }
+                /// onDelete only use on ForEach
+                .onDelete(perform: { indexSet in
+                    self.restaurants.remove(atOffsets: indexSet)
+                })
             }
-            /// onDelete only use on ForEach
-            .onDelete(perform: { indexSet in
-                self.restaurants.remove(atOffsets: indexSet)
-            })
-        }
-        .listStyle(.plain)
+            .listStyle(.plain)
+        })
     }
     
     private func delete(item restaurant: Restaurant) {

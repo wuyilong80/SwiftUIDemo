@@ -11,8 +11,6 @@ struct ContentListView: View {
     
     @State var selectedContent: ContentData?
     
-    var settingStore = SettingStore()
-    
     var body: some View {
         NavigationView(content: {
             List {
@@ -24,9 +22,7 @@ struct ContentListView: View {
                 }
             }
             .fullScreenCover(item: $selectedContent, content: { content in
-                BaseContainerView(title: content.title) {
-                    content.contentView
-                }
+                content.contentView
             })
             .navigationTitle("Content")
         })

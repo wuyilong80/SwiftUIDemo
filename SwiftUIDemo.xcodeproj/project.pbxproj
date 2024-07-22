@@ -27,6 +27,7 @@
 		AC4E78CF2C4A3DF300ED9A12 /* DragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78CE2C4A3DF300ED9A12 /* DragGestureView.swift */; };
 		AC4E78D12C4A515700ED9A12 /* CombinationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D02C4A515700ED9A12 /* CombinationGestureView.swift */; };
 		AC4E78D32C4A58A600ED9A12 /* ScalableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D22C4A58A600ED9A12 /* ScalableView.swift */; };
+		AC4E78D62C4A63F300ED9A12 /* Chapter18MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D52C4A63F300ED9A12 /* Chapter18MainView.swift */; };
 		AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A32C217470003A7BC8 /* StateDemoView.swift */; };
 		AC65C5A72C218C93003A7BC8 /* ShapeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */; };
 		AC65C5A92C24062B003A7BC8 /* DomeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A82C24062B003A7BC8 /* DomeShape.swift */; };
@@ -58,6 +59,8 @@
 		ACA0AF792C37FB02006899E4 /* Chapter15ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0AF782C37FB02006899E4 /* Chapter15ViewModel.swift */; };
 		ACC904BB2C3D19C8002F2390 /* Chapter16MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC904BA2C3D19C8002F2390 /* Chapter16MainView.swift */; };
 		ACCB80F92C491E0A00B1A7AA /* Chapter17MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB80F82C491E0A00B1A7AA /* Chapter17MainView.swift */; };
+		ACD1F7DB2C4E082B00195E9B /* NewRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1F7DA2C4E082B00195E9B /* NewRestaurant.swift */; };
+		ACD1F7DD2C4E0AD000195E9B /* RestaurantBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1F7DC2C4E0AD000195E9B /* RestaurantBottomSheet.swift */; };
 		ACD8980D2C200C9100A9840B /* ScrollDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8980C2C200C9100A9840B /* ScrollDemoView.swift */; };
 		ACD898102C201A4D00A9840B /* ButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8980F2C201A4D00A9840B /* ButtonDemoView.swift */; };
 		ACF52B8E2C2D53A0005ABB07 /* ListDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF52B8D2C2D53A0005ABB07 /* ListDemoView.swift */; };
@@ -90,6 +93,7 @@
 		AC4E78CE2C4A3DF300ED9A12 /* DragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureView.swift; sourceTree = "<group>"; };
 		AC4E78D02C4A515700ED9A12 /* CombinationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationGestureView.swift; sourceTree = "<group>"; };
 		AC4E78D22C4A58A600ED9A12 /* ScalableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableView.swift; sourceTree = "<group>"; };
+		AC4E78D52C4A63F300ED9A12 /* Chapter18MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter18MainView.swift; sourceTree = "<group>"; };
 		AC65C5A32C217470003A7BC8 /* StateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A82C24062B003A7BC8 /* DomeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomeShape.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		ACA0AF782C37FB02006899E4 /* Chapter15ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15ViewModel.swift; sourceTree = "<group>"; };
 		ACC904BA2C3D19C8002F2390 /* Chapter16MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter16MainView.swift; sourceTree = "<group>"; };
 		ACCB80F82C491E0A00B1A7AA /* Chapter17MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter17MainView.swift; sourceTree = "<group>"; };
+		ACD1F7DA2C4E082B00195E9B /* NewRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurant.swift; sourceTree = "<group>"; };
+		ACD1F7DC2C4E0AD000195E9B /* RestaurantBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBottomSheet.swift; sourceTree = "<group>"; };
 		ACD8980C2C200C9100A9840B /* ScrollDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDemoView.swift; sourceTree = "<group>"; };
 		ACD8980F2C201A4D00A9840B /* ButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDemoView.swift; sourceTree = "<group>"; };
 		ACF52B8D2C2D53A0005ABB07 /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 				ACA0AF712C37F0BB006899E4 /* Chapter15 */,
 				ACC904B92C3D19AB002F2390 /* Chapter16 */,
 				ACCB80F72C491DE500B1A7AA /* Chapter17 */,
+				AC4E78D42C4A63D200ED9A12 /* Chapter18 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				219DA7C4296D62BF00560846 /* Assets.xcassets */,
 				219DA7C6296D62BF00560846 /* Preview Content */,
@@ -246,6 +253,16 @@
 				AC3B3D362C1C349E005A3B38 /* StackDemoView.swift */,
 			);
 			path = Chapter4;
+			sourceTree = "<group>";
+		};
+		AC4E78D42C4A63D200ED9A12 /* Chapter18 */ = {
+			isa = PBXGroup;
+			children = (
+				AC4E78D52C4A63F300ED9A12 /* Chapter18MainView.swift */,
+				ACD1F7DA2C4E082B00195E9B /* NewRestaurant.swift */,
+				ACD1F7DC2C4E0AD000195E9B /* RestaurantBottomSheet.swift */,
+			);
+			path = Chapter18;
 			sourceTree = "<group>";
 		};
 		AC65C5A22C217455003A7BC8 /* Chapter7 */ = {
@@ -456,11 +473,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC65C5B42C241AA8003A7BC8 /* ExplicitAnimation.swift in Sources */,
+				ACD1F7DB2C4E082B00195E9B /* NewRestaurant.swift in Sources */,
 				AC874C102C3651F7000FD1D7 /* Chapter13MainView.swift in Sources */,
 				AC65C5BA2C2434B5003A7BC8 /* BaseNavigationBackView.swift in Sources */,
 				AC65C5BE2C243771003A7BC8 /* DelayAnimation.swift in Sources */,
 				ACF52B922C2D6F4E005ABB07 /* ListHomework.swift in Sources */,
 				AC18299D2C32825200CDA6F2 /* NavigationHomework.swift in Sources */,
+				AC4E78D62C4A63F300ED9A12 /* Chapter18MainView.swift in Sources */,
 				AC6EDB972C1952950028A6D9 /* TextDemoView.swift in Sources */,
 				AC18299B2C32824600CDA6F2 /* NavigationRestaurantView.swift in Sources */,
 				ACFA28502B1DC81B0044145F /* Restaurant.swift in Sources */,
@@ -503,6 +522,7 @@
 				AC65C5BC2C2436BF003A7BC8 /* ProgressIndicatorAnimation.swift in Sources */,
 				AC65C5AD2C241369003A7BC8 /* DountChartShape.swift in Sources */,
 				AC9CC80F2C252EFE00E756B8 /* TransitionDemoView.swift in Sources */,
+				ACD1F7DD2C4E0AD000195E9B /* RestaurantBottomSheet.swift in Sources */,
 				ACF52B902C2D6E7C005ABB07 /* ListView.swift in Sources */,
 				AC874C1D2C36A676000FD1D7 /* NewSettingView.swift in Sources */,
 				AC3B3D372C1C349E005A3B38 /* StackDemoView.swift in Sources */,

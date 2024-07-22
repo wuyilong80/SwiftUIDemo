@@ -11,7 +11,7 @@ struct StackDemoView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 15.0) {
-                HeaderView()
+                StockHeaderView()
                 HStack(spacing: 15.0) {
                     PriceView(title: "Basic", price: "$9", textColor: .white, backColor: .purple)
                     
@@ -73,7 +73,7 @@ struct StackDemoView: View {
  can that some view embed in some view or extract view to independent view.
  */
 
-struct HeaderView: View {
+struct StockHeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10.0, content: {

@@ -27,6 +27,9 @@
 		AC4E78D12C4A515700ED9A12 /* CombinationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D02C4A515700ED9A12 /* CombinationGestureView.swift */; };
 		AC4E78D32C4A58A600ED9A12 /* ScalableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D22C4A58A600ED9A12 /* ScalableView.swift */; };
 		AC4E78D62C4A63F300ED9A12 /* Chapter18MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E78D52C4A63F300ED9A12 /* Chapter18MainView.swift */; };
+		AC56FEB62C535191007A7131 /* Chapter19MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56FEB52C535191007A7131 /* Chapter19MainView.swift */; };
+		AC56FEB82C5352E5007A7131 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56FEB72C5352E4007A7131 /* Trip.swift */; };
+		AC56FEBA2C535527007A7131 /* TinderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56FEB92C535527007A7131 /* TinderCardView.swift */; };
 		AC65C5A42C217470003A7BC8 /* StateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A32C217470003A7BC8 /* StateDemoView.swift */; };
 		AC65C5A72C218C93003A7BC8 /* ShapeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */; };
 		AC65C5A92C24062B003A7BC8 /* DomeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65C5A82C24062B003A7BC8 /* DomeShape.swift */; };
@@ -92,6 +95,9 @@
 		AC4E78D02C4A515700ED9A12 /* CombinationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationGestureView.swift; sourceTree = "<group>"; };
 		AC4E78D22C4A58A600ED9A12 /* ScalableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableView.swift; sourceTree = "<group>"; };
 		AC4E78D52C4A63F300ED9A12 /* Chapter18MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter18MainView.swift; sourceTree = "<group>"; };
+		AC56FEB52C535191007A7131 /* Chapter19MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter19MainView.swift; sourceTree = "<group>"; };
+		AC56FEB72C5352E4007A7131 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		AC56FEB92C535527007A7131 /* TinderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCardView.swift; sourceTree = "<group>"; };
 		AC65C5A32C217470003A7BC8 /* StateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A62C218C93003A7BC8 /* ShapeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDemoView.swift; sourceTree = "<group>"; };
 		AC65C5A82C24062B003A7BC8 /* DomeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomeShape.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				ACC904B92C3D19AB002F2390 /* Chapter16 */,
 				ACCB80F72C491DE500B1A7AA /* Chapter17 */,
 				AC4E78D42C4A63D200ED9A12 /* Chapter18 */,
+				AC56FEB42C53517A007A7131 /* Chapter19 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				219DA7C4296D62BF00560846 /* Assets.xcassets */,
 				219DA7C6296D62BF00560846 /* Preview Content */,
@@ -260,6 +267,16 @@
 				ACD1F7DC2C4E0AD000195E9B /* RestaurantBottomSheet.swift */,
 			);
 			path = Chapter18;
+			sourceTree = "<group>";
+		};
+		AC56FEB42C53517A007A7131 /* Chapter19 */ = {
+			isa = PBXGroup;
+			children = (
+				AC56FEB52C535191007A7131 /* Chapter19MainView.swift */,
+				AC56FEB92C535527007A7131 /* TinderCardView.swift */,
+				AC56FEB72C5352E4007A7131 /* Trip.swift */,
+			);
+			path = Chapter19;
 			sourceTree = "<group>";
 		};
 		AC65C5A22C217455003A7BC8 /* Chapter7 */ = {
@@ -478,10 +495,12 @@
 				AC4E78D62C4A63F300ED9A12 /* Chapter18MainView.swift in Sources */,
 				AC6EDB972C1952950028A6D9 /* TextDemoView.swift in Sources */,
 				AC18299B2C32824600CDA6F2 /* NavigationRestaurantView.swift in Sources */,
+				AC56FEB62C535191007A7131 /* Chapter19MainView.swift in Sources */,
 				ACFA28502B1DC81B0044145F /* Restaurant.swift in Sources */,
 				ACA0AF772C37F90B006899E4 /* FormField.swift in Sources */,
 				AC66F3C92C130EA500E66967 /* DraggableView.swift in Sources */,
 				AC3754E82B20487B00E49781 /* SettingView.swift in Sources */,
+				AC56FEB82C5352E5007A7131 /* Trip.swift in Sources */,
 				ACFA28492B1DA5CB0044145F /* Article.swift in Sources */,
 				AC4E78CF2C4A3DF300ED9A12 /* DragGestureView.swift in Sources */,
 				AC4E78CB2C4A0A1500ED9A12 /* TapGestureView.swift in Sources */,
@@ -511,6 +530,7 @@
 				AC21E6A12C17FED6005103D6 /* ContentListView.swift in Sources */,
 				ACA0AF792C37FB02006899E4 /* Chapter15ViewModel.swift in Sources */,
 				ACA0AF752C37F8C1006899E4 /* RequirementText.swift in Sources */,
+				AC56FEBA2C535527007A7131 /* TinderCardView.swift in Sources */,
 				AC4E78CD2C4A0A2400ED9A12 /* LongPressGestureView.swift in Sources */,
 				AC1829A02C34032D00CDA6F2 /* AlertDemoView.swift in Sources */,
 				AC9CC8172C25619000E756B8 /* TransitionHomeworkTwo.swift in Sources */,

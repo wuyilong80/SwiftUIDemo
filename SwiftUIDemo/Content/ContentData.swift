@@ -76,6 +76,8 @@ struct ContentData: Identifiable {
             Chapter17MainView()
         case .chapter18:
             Chapter18MainView()
+        case .chapter19:
+            Chapter19MainView()
         default:
             EmptyView()
         }
@@ -100,5 +102,6 @@ var contents: [ContentData] = [
     ContentData(title: "Chapter 15", description: "Combine Advanced", mode: .chapter15),
     ContentData(title: "Chapter 16", description: "Slide Delete、Action Sheet and Context Menu", mode: .chapter16),
     ContentData(title: "Chapter 17", description: "Gesture", mode: .chapter17),
-    ContentData(title: "Chapter 18", description: "Bottom Sheet", mode: .chapter18)
+    ContentData(title: "Chapter 18", description: "Bottom Sheet", mode: .chapter18),
+    ContentData(title: "Chapter 19", description: "Tinder UI", mode: .chapter19)
 ]

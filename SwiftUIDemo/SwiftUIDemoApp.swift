@@ -15,13 +15,6 @@ struct SwiftUIDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentListView()
-//            ListContentView()
-//            ContentView()
-//            TransitionView()
-//            FormView().environmentObject(settingStore)
-//            AccountView()
-//            ActionRestaurantView()
-//            GestureView()
         }
     }
 }

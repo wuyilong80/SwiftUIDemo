@@ -9,14 +9,23 @@ import SwiftUI
 
 enum DragState {
     case inactive
-    case pressing
-    case dragging(translation: CGSize)
+    case pressing(index: Int? = nil)
+    case dragging(index: Int? = nil, translation: CGSize)
+    
+    var index: Int? {
+        switch self {
+        case .pressing(let index), .dragging(let index, _):
+            return index
+        case .inactive:
+            return nil
+        }
+    }
     
     var translation: CGSize {
         switch self {
         case .inactive, .pressing:
             return .zero
-        case .dragging(let translation):
+        case .dragging(_, let translation):
             return translation
         }
     }
@@ -58,7 +67,7 @@ struct CombinationGestureView: View {
                     .updating($dragState, body: { value, state, transcation in
                         switch value {
                         case .first(true):
-                            state = .pressing
+                            state = .pressing()
                         case .second(true, let drag):
                             state = .dragging(translation: drag?.translation ?? .zero)
                         default:

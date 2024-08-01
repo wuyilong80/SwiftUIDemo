@@ -12,6 +12,11 @@
 		219DA7C8296D62BF00560846 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7C7296D62BF00560846 /* Preview Assets.xcassets */; };
 		219DA7D0296E4CFB00560846 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7CF296E4CD600560846 /* Nunito-Regular.ttf */; };
 		219DA7D3296E4E2200560846 /* MoonDance-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 219DA7D2296E4E2200560846 /* MoonDance-Regular.ttf */; };
+		AC0461392C5B2AD3009223CE /* Chapter20MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0461382C5B2AD3009223CE /* Chapter20MainView.swift */; };
+		AC04613B2C5B2C07009223CE /* WalletTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04613A2C5B2C07009223CE /* WalletTransaction.swift */; };
+		AC04613D2C5B2C12009223CE /* WalletCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04613C2C5B2C12009223CE /* WalletCard.swift */; };
+		AC04613F2C5B2C2C009223CE /* WalletTransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04613E2C5B2C2C009223CE /* WalletTransactionHistoryView.swift */; };
+		AC0461412C5B2ECF009223CE /* WalletCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0461402C5B2ECF009223CE /* WalletCardView.swift */; };
 		AC1829992C325ACF00CDA6F2 /* NavigationDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1829982C325ACF00CDA6F2 /* NavigationDemoView.swift */; };
 		AC18299B2C32824600CDA6F2 /* NavigationRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18299A2C32824600CDA6F2 /* NavigationRestaurantView.swift */; };
 		AC18299D2C32825200CDA6F2 /* NavigationHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18299C2C32825200CDA6F2 /* NavigationHomework.swift */; };
@@ -80,6 +85,11 @@
 		219DA7CF296E4CD600560846 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		219DA7D1296E4D6700560846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		219DA7D2296E4E2200560846 /* MoonDance-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoonDance-Regular.ttf"; sourceTree = "<group>"; };
+		AC0461382C5B2AD3009223CE /* Chapter20MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter20MainView.swift; sourceTree = "<group>"; };
+		AC04613A2C5B2C07009223CE /* WalletTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransaction.swift; sourceTree = "<group>"; };
+		AC04613C2C5B2C12009223CE /* WalletCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCard.swift; sourceTree = "<group>"; };
+		AC04613E2C5B2C2C009223CE /* WalletTransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransactionHistoryView.swift; sourceTree = "<group>"; };
+		AC0461402C5B2ECF009223CE /* WalletCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
 		AC1829982C325ACF00CDA6F2 /* NavigationDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemoView.swift; sourceTree = "<group>"; };
 		AC18299A2C32824600CDA6F2 /* NavigationRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRestaurantView.swift; sourceTree = "<group>"; };
 		AC18299C2C32825200CDA6F2 /* NavigationHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHomework.swift; sourceTree = "<group>"; };
@@ -191,6 +201,7 @@
 				ACCB80F72C491DE500B1A7AA /* Chapter17 */,
 				AC4E78D42C4A63D200ED9A12 /* Chapter18 */,
 				AC56FEB42C53517A007A7131 /* Chapter19 */,
+				AC0461372C5B2AB3009223CE /* Chapter20 */,
 				219DA7D1296E4D6700560846 /* Info.plist */,
 				219DA7C4296D62BF00560846 /* Assets.xcassets */,
 				219DA7C6296D62BF00560846 /* Preview Content */,
@@ -213,6 +224,18 @@
 				219DA7D2296E4E2200560846 /* MoonDance-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AC0461372C5B2AB3009223CE /* Chapter20 */ = {
+			isa = PBXGroup;
+			children = (
+				AC0461382C5B2AD3009223CE /* Chapter20MainView.swift */,
+				AC04613A2C5B2C07009223CE /* WalletTransaction.swift */,
+				AC04613C2C5B2C12009223CE /* WalletCard.swift */,
+				AC04613E2C5B2C2C009223CE /* WalletTransactionHistoryView.swift */,
+				AC0461402C5B2ECF009223CE /* WalletCardView.swift */,
+			);
+			path = Chapter20;
 			sourceTree = "<group>";
 		};
 		AC1829972C3259C000CDA6F2 /* Chapter11 */ = {
@@ -493,6 +516,7 @@
 				ACF52B922C2D6F4E005ABB07 /* ListHomework.swift in Sources */,
 				AC18299D2C32825200CDA6F2 /* NavigationHomework.swift in Sources */,
 				AC4E78D62C4A63F300ED9A12 /* Chapter18MainView.swift in Sources */,
+				AC04613B2C5B2C07009223CE /* WalletTransaction.swift in Sources */,
 				AC6EDB972C1952950028A6D9 /* TextDemoView.swift in Sources */,
 				AC18299B2C32824600CDA6F2 /* NavigationRestaurantView.swift in Sources */,
 				AC56FEB62C535191007A7131 /* Chapter19MainView.swift in Sources */,
@@ -516,6 +540,7 @@
 				AC65C5B62C24222C003A7BC8 /* RotationEffectAnimation.swift in Sources */,
 				AC3754E42B20164800E49781 /* CardView.swift in Sources */,
 				AC950DF32BEDF96E004B9D05 /* SettingStore.swift in Sources */,
+				AC04613F2C5B2C2C009223CE /* WalletTransactionHistoryView.swift in Sources */,
 				ACCB80F92C491E0A00B1A7AA /* Chapter17MainView.swift in Sources */,
 				AC4E78D12C4A515700ED9A12 /* CombinationGestureView.swift in Sources */,
 				ACC904BB2C3D19C8002F2390 /* Chapter16MainView.swift in Sources */,
@@ -525,8 +550,11 @@
 				ACD898102C201A4D00A9840B /* ButtonDemoView.swift in Sources */,
 				AC65C5B82C24259C003A7BC8 /* RectangleProgressAnimation.swift in Sources */,
 				AC65C5B02C241894003A7BC8 /* AnimationDemoView.swift in Sources */,
+				AC04613D2C5B2C12009223CE /* WalletCard.swift in Sources */,
+				AC0461392C5B2AD3009223CE /* Chapter20MainView.swift in Sources */,
 				AC65C5C02C2437A7003A7BC8 /* TransformAnimation.swift in Sources */,
 				AC1829992C325ACF00CDA6F2 /* NavigationDemoView.swift in Sources */,
+				AC0461412C5B2ECF009223CE /* WalletCardView.swift in Sources */,
 				AC21E6A12C17FED6005103D6 /* ContentListView.swift in Sources */,
 				ACA0AF792C37FB02006899E4 /* Chapter15ViewModel.swift in Sources */,
 				ACA0AF752C37F8C1006899E4 /* RequirementText.swift in Sources */,
